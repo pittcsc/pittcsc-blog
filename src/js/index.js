@@ -1,12 +1,17 @@
-function registerLike() {
-  const name = document.querySelector(".post-title");
-  const btn = document.querySelector(".post-like");
+function registerLike(title) {
+  const l = JSON.parse(localStorage.getItem("likes"));
 
-  const l = localStorage.getItem("likes");
-  (l == null) | undefined ? (likes = "") : null;
+  const isPresent = (element) => element === title;
 
-  btn.addEventListener("click", () => {
-    localStorage.setItem("likes", [likes, name.innerHTML.toString()]);
-  });
-  console.log(name.innerHTML.toString());
+  if (l != null || l != undefined) {
+    if (!l.some(isPresent)) {
+      localStorage.setItem("likes", JSON.stringify([...l, title]));
+    }
+  } else {
+    localStorage.setItem("likes", JSON.stringify([title]));
+  }
+
+  // (l != null) | (l != undefined) && !l.some(isPresent)
+  //   ? localStorage.setItem("likes", JSON.stringify([...l, title]))
+  //   : localStorage.setItem("likes", JSON.stringify([title]));
 }
