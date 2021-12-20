@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-    <title>Web Dev - A Pitt CSC Branch</title>
+    <title>Pitt CSC Branches</title>
   </head>
   <body>
-    <div><a href="https://pittcsc.org/" class="branch-link">A Pitt CSC Branch 🌿</a></div>
+    <div><a href="https://pittcsc.org/" class="branch-link">A Pitt CSC Website 🌿</a></div>
     <header>
-      <h1 class="page-title">Web Dev</h1>
+      <h1 class="page-title">Pitt CSC Branches</h1>
+      <p class="page-intro">
+        Welcome to CSC Branches! </br> 
+        Here you can find information about all things branches related!
+      </p>
     </header>
     <main>
       <article>
-        <ul class="post-list">
-          {% for page in collections.pages %} 
+        <ul class="branch-list">
+          {% for branch in collections.branches %} 
             <li>
-              <a href={{page.url}} class="post-block">
-                <div class="post-title">{{page.data.title}}</div>
-                <div class="post-author">By {{page.data.author}}</div>
-                <div class="post-date">{{ page.date.toDateString() }}</div>
+              <a href={{branch.url}} class="branch-block">
+                <div class="branch-title">{{branch.data.title}}</div>
               </a>
             </li>
           {%- endfor %}
