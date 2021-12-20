@@ -7,11 +7,14 @@ layout: base.njk
 <ul class="post-list">
   {% for page in collections.web_dev %} 
     <li>
+    <div class="post-inner">
       <a href={{page.url}} class="post-block">
         <div class="post-title">{{page.data.title}}</div>
         <div class="post-author">By {{page.data.author}}</div>
         <div class="post-date">{{ page.date.toDateString() }}</div>
       </a>
+      <a href="https://wikipedia/com" class="post-like">Like</a>
+    </div>
     </li>
   {%- endfor %}
 </ul>
