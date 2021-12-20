@@ -1,4 +1,4 @@
 {
- "layout": "page.njk",
- "tags": "pages"
+ "layout": "branch.njk",
+ "tags": "branches"
 }
