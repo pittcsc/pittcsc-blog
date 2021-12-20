@@ -1,0 +1,21 @@
+---
+layout: base.njk
+---
+
+{{ content | safe}}
+
+<ul class="post-list">
+  {% for page in collections.web_dev %} 
+    <li>
+      <a href={{page.url}} class="post-block">
+        <div class="post-title">{{page.data.title}}</div>
+        <div class="post-author">By {{page.data.author}}</div>
+        <div class="post-date">{{ page.date.toDateString() }}</div>
+      </a>
+    </li>
+  {%- endfor %}
+</ul>
+
+<footer class="post-footer">
+ <a href="/" class="back-home">Back home</a>
+</footer>
