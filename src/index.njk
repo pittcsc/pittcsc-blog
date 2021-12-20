@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <title>Web Dev - A Pitt CSC Branch</title>
+  </head>
+  <body>
+    <div><a href="https://pittcsc.org/" class="branch-link">A Pitt CSC Branch 🌿</a></div>
+    <header>
+      <h1 class="page-title">Web Dev</h1>
+    </header>
+    <main>
+      <article>
+        <ul class="post-list">
+          {% for page in collections.pages %} 
+            <li>
+              <a href={{page.url}} class="post-block">
+                <div class="post-title">{{page.data.title}}</div>
+                <div class="post-author">By {{page.data.author}}</div>
+                <div class="post-date">{{ page.date.toDateString() }}</div>
+              </a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </article>
+    </main>
+    <footer>&copy; 2021 Pitt Computer Science Club</footer>
+  </body>
+</html>

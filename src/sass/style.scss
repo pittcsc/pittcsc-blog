@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$pitt-dark-blue: #243e8b;
+$pitt-light-blue: #4d70d9;
+$pitt-yellow: #ffb81c;
+$pitt-gold: #cdb87e;
+
+$special-color: #8fbc8b;
+
 /* Very Smol Reset */
 * {
   box-sizing: border-box;
@@ -11,17 +20,17 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
-  font-family: system-ui, sans-serif;
   line-height: 1.5;
   color: #222;
 }
 
 body > * {
-  --layout-spacing: max(8vh, 3rem);
+  --layout-spacing: Max(8vh, 3rem);
   --max-width: 70ch;
   width: Min(100%, var(--max-width));
   margin-left: auto;
   margin-right: auto;
+  font-family: "Poppins", sans-serif;
 }
 
 nav ul {
@@ -31,10 +40,9 @@ nav ul {
   padding: 0;
   margin-left: -1rem;
   margin-right: -1rem;
-}
-
-nav ul li {
-  padding: 0.5rem 1rem;
+  li {
+    padding: 0.5rem 1rem;
+  }
 }
 
 nav [aria-current="page"] {
@@ -82,7 +90,11 @@ a {
 }
 
 a:focus {
-  outline: 1px solid currentColor;
+  outline: none;
+}
+
+a:focus-visible {
+  outline: 2px solid gainsboro;
   outline-offset: 0.2em;
 }
 
@@ -121,4 +133,67 @@ blockquote {
   border-left: 3px solid rgba(0, 0, 0, 0.35);
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 0 0.25rem 0.25rem 0;
+}
+
+/* Custom Styles */
+
+.page-title {
+  font-size: Max(5vw, 2.5rem);
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+  text-indent: 0;
+  li {
+    .post-block {
+      text-decoration: none;
+      color: #222;
+      line-height: normal;
+      background-color: gainsboro;
+      display: block;
+      padding: 2rem;
+      transition: transform 150ms ease;
+
+      .post-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .post-date {
+        margin: 0;
+      }
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+}
+
+.branch-link {
+  text-decoration: none;
+  color: #222;
+}
+
+.back-home {
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
+  padding: 0.5rem 1rem;
+  border: 2px solid gainsboro;
+}
+
+.post-footer {
+  margin-top: 4rem;
+  .author {
+    font-weight: bold;
+  }
+
+  .other-posts {
+    margin-top: 4rem;
+    p {
+      font-weight: bold;
+    }
+  }
 }
