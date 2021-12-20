@@ -107,6 +107,29 @@ blockquote {
 .page-title {
   font-size: Max(5vw, 2.5rem); }
 
+.page-intro {
+  font-size: Max(2vw, 1rem); }
+
+.branch-list {
+  list-style-type: none;
+  padding: 0;
+  text-indent: 0; }
+  .branch-list li .branch-block {
+    text-decoration: none;
+    color: #222;
+    line-height: normal;
+    background-color: gainsboro;
+    display: block;
+    padding: 2rem;
+    transition: transform 150ms ease; }
+    .branch-list li .branch-block .branch-title {
+      font-weight: bold;
+      font-size: 1.5rem; }
+    .branch-list li .branch-block .branch-date {
+      margin: 0; }
+    .branch-list li .branch-block:hover {
+      transform: scale(1.01); }
+
 .post-list {
   list-style-type: none;
   padding: 0;
@@ -138,11 +161,11 @@ blockquote {
   padding: 0.5rem 1rem;
   border: 2px solid gainsboro; }
 
-.post-footer {
+.branch-footer {
   margin-top: 4rem; }
-  .post-footer .author {
+  .branch-footer .author {
     font-weight: bold; }
-  .post-footer .other-posts {
+  .branch-footer .other-posts {
     margin-top: 4rem; }
-    .post-footer .other-posts p {
+    .branch-footer .other-posts p {
       font-weight: bold; }
