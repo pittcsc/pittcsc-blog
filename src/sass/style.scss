@@ -141,6 +141,40 @@ blockquote {
   font-size: Max(5vw, 2.5rem);
 }
 
+.page-intro {
+  font-size: Max(2vw, 1rem);
+}
+
+.branch-list {
+  list-style-type: none;
+  padding: 0;
+  text-indent: 0;
+  li {
+    .branch-block {
+      text-decoration: none;
+      color: #222;
+      line-height: normal;
+      background-color: gainsboro;
+      display: block;
+      padding: 2rem;
+      transition: transform 150ms ease;
+
+      .branch-title {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .branch-date {
+        margin: 0;
+      }
+
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+}
+
 .post-list {
   list-style-type: none;
   padding: 0;
@@ -184,7 +218,7 @@ blockquote {
   border: 2px solid gainsboro;
 }
 
-.post-footer {
+.branch-footer {
   margin-top: 4rem;
   .author {
     font-weight: bold;
