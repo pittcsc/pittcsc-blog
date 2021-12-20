@@ -134,7 +134,17 @@ blockquote {
   list-style-type: none;
   padding: 0;
   text-indent: 0; }
+  .post-list li .post-inner {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #222;
+    line-height: normal;
+    background-color: gainsboro;
+    padding: 2rem;
+    transition: transform 150ms ease; }
   .post-list li .post-block {
+    width: 80%;
     text-decoration: none;
     color: #222;
     line-height: normal;
@@ -149,6 +159,9 @@ blockquote {
       margin: 0; }
     .post-list li .post-block:hover {
       transform: scale(1.01); }
+
+.post-like {
+  margin: auto; }
 
 .branch-link {
   text-decoration: none;
