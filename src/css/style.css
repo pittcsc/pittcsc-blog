@@ -161,7 +161,18 @@ blockquote {
       transform: scale(1.01); }
 
 .post-like {
-  margin: auto; }
+  margin: auto;
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
+  font-size: 2.5rem;
+  line-height: normal;
+  padding: 0.5rem 1rem;
+  border: 2px solid gainsboro;
+  cursor: pointer;
+  transition: 0.3s ease; }
+  .post-like:hover {
+    transform: translateY(-3px); }
 
 .branch-link {
   text-decoration: none;
