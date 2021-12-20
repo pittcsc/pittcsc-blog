@@ -180,7 +180,19 @@ blockquote {
   padding: 0;
   text-indent: 0;
   li {
+    .post-inner {
+      display: flex;
+      flex-direction: row;
+      text-decoration: none;
+      color: #222;
+      line-height: normal;
+      background-color: gainsboro;
+      padding: 2rem;
+      transition: transform 150ms ease;
+    }
+
     .post-block {
+      width: 80%;
       text-decoration: none;
       color: #222;
       line-height: normal;
@@ -203,6 +215,10 @@ blockquote {
       }
     }
   }
+}
+
+.post-like {
+  margin: auto;
 }
 
 .branch-link {
