@@ -5,8 +5,14 @@ layout: base.njk
 {{ content | safe}}
 
 <footer class="post-footer">
- <p class="author">By {{author}}</p>
- <p>Published on: {{ page.date.toDateString() }}</p>
+<div class="footer-metadata">
+<div>
+    <p class="author">By {{author}}</p>
+    <p>Published on: {{ page.date.toDateString() }}</p>
+  </div>
+  <button onclick='registerLike("{{title}}")' class="post-like">&#10084;</button>
+</div>
+
  <div class="other-posts">
   <p>Other posts</p>
          <ul class="post-list">
