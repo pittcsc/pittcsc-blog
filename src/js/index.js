@@ -10,8 +10,4 @@ function registerLike(title) {
   } else {
     localStorage.setItem("likes", JSON.stringify([title]));
   }
-
-  // (l != null) | (l != undefined) && !l.some(isPresent)
-  //   ? localStorage.setItem("likes", JSON.stringify([...l, title]))
-  //   : localStorage.setItem("likes", JSON.stringify([title]));
 }
