@@ -5,25 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-    <script src="/js/index.js"></script>
-    <title>Pitt CSC Branches</title>
+    <title>Web Dev - A Pitt CSC Branch</title>
   </head>
   <body>
-    <div><a href="https://pittcsc.org/" class="branch-link">A Pitt CSC Website 🌿</a></div>
+    <div><a href="https://pittcsc.org/" class="branch-link">A Pitt CSC Branch 🌿</a></div>
     <header>
-      <h1 class="page-title">Pitt CSC Branches</h1>
-      <p class="page-intro">
-        Welcome to CSC Branches! </br> 
-        Here you can find information about all things branches related!
-      </p>
+      <h1 class="page-title">Web Dev</h1>
     </header>
     <main>
       <article>
-        <ul class="branch-list">
-          {% for branch in collections.branches %} 
+        <ul class="post-list">
+          {% for post in collections.posts %} 
             <li>
-              <a href={{branch.url}} class="branch-block">
-                <div class="branch-title">{{branch.data.title}}</div>
+              <a href={{post.url}} class="post-block">
+                <div class="post-title">{{post.data.title}}</div>
+                <div class="post-author">By {{post.data.author}}</div>
+                <div class="post-date">{{ post.date.toDateString() }}</div>
               </a>
             </li>
           {%- endfor %}
