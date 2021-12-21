@@ -110,26 +110,6 @@ blockquote {
 .page-intro {
   font-size: Max(2vw, 1rem); }
 
-.branch-list {
-  list-style-type: none;
-  padding: 0;
-  text-indent: 0; }
-  .branch-list li .branch-block {
-    text-decoration: none;
-    color: #222;
-    line-height: normal;
-    background-color: gainsboro;
-    display: block;
-    padding: 2rem;
-    transition: transform 150ms ease; }
-    .branch-list li .branch-block .branch-title {
-      font-weight: bold;
-      font-size: 1.5rem; }
-    .branch-list li .branch-block .branch-date {
-      margin: 0; }
-    .branch-list li .branch-block:hover {
-      transform: scale(1.01); }
-
 .post-list {
   list-style-type: none;
   padding: 0;
@@ -144,7 +124,6 @@ blockquote {
     padding: 2rem;
     transition: transform 150ms ease; }
   .post-list li .post-block {
-    width: 80%;
     text-decoration: none;
     color: #222;
     line-height: normal;
@@ -161,8 +140,7 @@ blockquote {
       transform: scale(1.01); }
 
 .post-like {
-  margin: auto;
-  display: inline-block;
+  margin: 0;
   text-decoration: none;
   color: #222;
   font-size: 2.5rem;
@@ -172,7 +150,7 @@ blockquote {
   cursor: pointer;
   transition: 0.3s ease; }
   .post-like:hover {
-    transform: translateY(-3px); }
+    transform: translateY(-4px); }
 
 .branch-link {
   text-decoration: none;
@@ -185,11 +163,15 @@ blockquote {
   padding: 0.5rem 1rem;
   border: 2px solid gainsboro; }
 
-.branch-footer {
+.post-footer {
   margin-top: 4rem; }
-  .branch-footer .author {
-    font-weight: bold; }
-  .branch-footer .other-posts {
+  .post-footer .footer-metadata {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .post-footer .footer-metadata .author {
+      font-weight: bold; }
+  .post-footer .other-posts {
     margin-top: 4rem; }
-    .branch-footer .other-posts p {
+    .post-footer .other-posts p {
       font-weight: bold; }

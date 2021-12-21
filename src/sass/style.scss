@@ -145,36 +145,6 @@ blockquote {
   font-size: Max(2vw, 1rem);
 }
 
-.branch-list {
-  list-style-type: none;
-  padding: 0;
-  text-indent: 0;
-  li {
-    .branch-block {
-      text-decoration: none;
-      color: #222;
-      line-height: normal;
-      background-color: gainsboro;
-      display: block;
-      padding: 2rem;
-      transition: transform 150ms ease;
-
-      .branch-title {
-        font-weight: bold;
-        font-size: 1.5rem;
-      }
-
-      .branch-date {
-        margin: 0;
-      }
-
-      &:hover {
-        transform: scale(1.01);
-      }
-    }
-  }
-}
-
 .post-list {
   list-style-type: none;
   padding: 0;
@@ -192,7 +162,6 @@ blockquote {
     }
 
     .post-block {
-      width: 80%;
       text-decoration: none;
       color: #222;
       line-height: normal;
@@ -218,8 +187,7 @@ blockquote {
 }
 
 .post-like {
-  margin: auto;
-  display: inline-block;
+  margin: 0;
   text-decoration: none;
   color: #222;
   font-size: 2.5rem;
@@ -230,7 +198,7 @@ blockquote {
   transition: 0.3s ease;
 
   &:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
   }
 }
 
@@ -247,10 +215,15 @@ blockquote {
   border: 2px solid gainsboro;
 }
 
-.branch-footer {
+.post-footer {
   margin-top: 4rem;
-  .author {
-    font-weight: bold;
+  .footer-metadata {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .author {
+      font-weight: bold;
+    }
   }
 
   .other-posts {
