@@ -151,6 +151,23 @@ blockquote {
   transition: 0.3s ease; }
   .post-like:hover {
     transform: translateY(-4px); }
+  .post-like svg {
+    fill: transparent;
+    stroke: #ff2581; }
+
+.filled-heart svg {
+  animation: fill-animation 300ms ease forwards; }
+
+@keyframes fill-animation {
+  0% {
+    fill: transparent;
+    transform: scale(1); }
+  50% {
+    fill: #ff2581;
+    transform: scale(1.1); }
+  100% {
+    fill: #ff2581;
+    transform: scale(1); } }
 
 .branch-link {
   text-decoration: none;
