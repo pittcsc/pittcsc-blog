@@ -5,6 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+        <!--Twitter Card-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{seo.twitter}}">
+    <meta name="twitter:creator" content="@{{seo.twitter}}">
+    <meta name="twitter:url" content="{{seo.baseURL}}{{page.url}}">
+
+    <!--Schema-->
+    <link rel="author" href="{{seo.baseURL}}">
+    <link rel="publisher" href="{{seo.baseURL}}">
+        
+    <!-- Facebook OpenGraph -->
+    <meta property="og:url" content="{{seo.baseURL}}{{page.url}}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{seo.title}}">
+    <meta property="og:locale" content="en_AU">
+    <meta property="article:author" content="{{seo.baseURL}}">
+    
+    {%- block seo -%}
+    <!--Twitter Card-->
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{ seo.description }}">
+    
+    <!--Schema-->
+    <meta itemprop="name" content="{{title}}">
+    <meta name="description" content="{{ seo.description }}">
+    
+    <!-- Facebook OpenGraph -->
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{ seo.description }}">
+    {%- endblock -%}
     <title>Web Dev - A Pitt CSC Branch</title>
   </head>
   <body>
