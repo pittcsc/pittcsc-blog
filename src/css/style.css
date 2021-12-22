@@ -105,7 +105,15 @@ blockquote {
 
 /* Custom Styles */
 .page-title {
-  font-size: Max(5vw, 2.5rem); }
+  position: relative;
+  font-size: Max(5vw, 2.5rem);
+  height: 100%; }
+  .page-title::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #8fbc8b;
+    left: -0.75rem; }
 
 .page-intro {
   font-size: Max(2vw, 1rem); }
@@ -133,7 +141,9 @@ blockquote {
     transition: transform 150ms ease; }
     .post-list li .post-block .post-title {
       font-weight: bold;
-      font-size: 1.5rem; }
+      font-size: 1.5rem;
+      text-decoration: underline;
+      text-decoration-color: #8fbc8b; }
     .post-list li .post-block .post-date {
       margin: 0; }
     .post-list li .post-block:hover {
