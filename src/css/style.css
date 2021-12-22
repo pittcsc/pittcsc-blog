@@ -107,10 +107,22 @@ blockquote {
 .page-title {
   font-size: Max(5vw, 2.5rem); }
 
+.page-intro {
+  font-size: Max(2vw, 1rem); }
+
 .post-list {
   list-style-type: none;
   padding: 0;
   text-indent: 0; }
+  .post-list li .post-inner {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #222;
+    line-height: normal;
+    background-color: gainsboro;
+    padding: 2rem;
+    transition: transform 150ms ease; }
   .post-list li .post-block {
     text-decoration: none;
     color: #222;
@@ -127,6 +139,19 @@ blockquote {
     .post-list li .post-block:hover {
       transform: scale(1.01); }
 
+.post-like {
+  margin: 0;
+  text-decoration: none;
+  color: #222;
+  font-size: 2.5rem;
+  line-height: normal;
+  padding: 0.5rem 1rem;
+  border: 2px solid gainsboro;
+  cursor: pointer;
+  transition: 0.3s ease; }
+  .post-like:hover {
+    transform: translateY(-4px); }
+
 .branch-link {
   text-decoration: none;
   color: #222; }
@@ -140,8 +165,12 @@ blockquote {
 
 .post-footer {
   margin-top: 4rem; }
-  .post-footer .author {
-    font-weight: bold; }
+  .post-footer .footer-metadata {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .post-footer .footer-metadata .author {
+      font-weight: bold; }
   .post-footer .other-posts {
     margin-top: 4rem; }
     .post-footer .other-posts p {

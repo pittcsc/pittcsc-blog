@@ -15,12 +15,12 @@
     <main>
       <article>
         <ul class="post-list">
-          {% for page in collections.pages %} 
+          {% for post in collections.posts %} 
             <li>
-              <a href={{page.url}} class="post-block">
-                <div class="post-title">{{page.data.title}}</div>
-                <div class="post-author">By {{page.data.author}}</div>
-                <div class="post-date">{{ page.date.toDateString() }}</div>
+              <a href={{post.url}} class="post-block">
+                <div class="post-title">{{post.data.title}}</div>
+                <div class="post-author">By {{post.data.author}}</div>
+                <div class="post-date">{{ post.date.toDateString() }}</div>
               </a>
             </li>
           {%- endfor %}
