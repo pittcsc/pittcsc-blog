@@ -1,6 +1,7 @@
 ---
-title: Material UI is Stupid
-author: Niccolo Nobili
+title: How to Animate with CSS
+author: Alexander Grattan
+date: 2021-12-19
 ---
 
 Paragraphs are separated by a blank line.
