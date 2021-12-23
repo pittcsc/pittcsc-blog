@@ -1,6 +1,7 @@
 ---
 title: Material UI is Stupid
 author: Niccolo Nobili
+date: 2021-12-20
 ---
 
 Paragraphs are separated by a blank line.
