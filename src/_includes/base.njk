@@ -41,6 +41,11 @@
     <div><a href="https://pittcsc.org/" class="branch-link">A Pitt CSC Branch 🌿</a></div>
     <header>
       <h1 class="page-title">{{title}}</h1>
+      <div class="post-tag">
+        {% for tag in tag %}
+          <p class="tag-text {{tag}}">{{tag}}</p>
+        {%- endfor %}
+      </div>
     </header>
     <main>
       <article>{{ content | safe }}</article>
