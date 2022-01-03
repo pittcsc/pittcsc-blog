@@ -10,6 +10,7 @@
     <meta name="twitter:site" content="@{{ seo.twitter }}" />
     <meta name="twitter:creator" content="@{{ seo.twitter }}" />
     <meta name="twitter:url" content="{{ seo.baseURL }}{{ page.url }}" />
+    '<meta name="twitter:image" content="{{ seo.baseURL }}{{ seo.image }}">
 
     <!--Schema-->
     <link rel="author" href="{{ seo.baseURL }}" />
@@ -20,6 +21,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ seo.title }}" />
     <meta property="og:locale" content="en_AU" />
+    <meta property="og:image" content="{{ seo.baseURL }}{{ seo.image }}">
     <meta property="article:author" content="{{ seo.baseURL }}" />
 
     {%- block seo -%}
