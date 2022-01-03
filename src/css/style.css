@@ -4,6 +4,10 @@
   box-sizing: border-box;
   margin: 0; }
 
+*::selection {
+  background-color: #243e8b;
+  color: white; }
+
 /* Layout */
 body {
   display: flex;
@@ -106,14 +110,18 @@ blockquote {
 /* Custom Styles */
 .page-title {
   position: relative;
-  font-size: Max(5vw, 2.5rem);
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
+  .page-title h1 {
+    padding: 1rem;
+    font-size: Max(5vw, 2.5rem);
+    animation: text-overflow 800ms ease forwards; }
   .page-title::before {
     content: "";
     position: absolute;
     height: 100%;
     border-left: 2px solid #ffb81c;
-    left: -0.75rem; }
+    left: 0rem; }
 
 .page-intro {
   font-size: Max(2vw, 1rem); }
@@ -179,6 +187,12 @@ blockquote {
     fill: #ff2581;
     transform: scale(1); } }
 
+@keyframes text-overflow {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+
 .branch-link {
   text-decoration: none;
   color: #222; }
@@ -202,3 +216,11 @@ blockquote {
     margin-top: 4rem; }
     .post-footer .other-posts p {
       font-weight: bold; }
+
+.footer-link {
+  color: black;
+  text-decoration: none; }
+  .footer-link:hover {
+    text-decoration: underline; }
+  .footer-link:focus-visible {
+    text-decoration: underline; }
