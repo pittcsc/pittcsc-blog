@@ -112,7 +112,7 @@ blockquote {
     content: "";
     position: absolute;
     height: 100%;
-    border-left: 2px solid #8fbc8b;
+    border-left: 2px solid #ffb81c;
     left: -0.75rem; }
 
 .page-intro {
@@ -143,7 +143,7 @@ blockquote {
       font-weight: bold;
       font-size: 1.5rem;
       text-decoration: underline;
-      text-decoration-color: #8fbc8b; }
+      text-decoration-color: #ffb81c; }
     .post-list li .post-block .post-date {
       margin: 0; }
     .post-list li .post-block:hover {
