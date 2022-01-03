@@ -267,9 +267,17 @@ blockquote {
   }
 }
 
-.branch-link {
+.header-link {
   text-decoration: none;
   color: #222;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
+  }
 }
 
 .back-home {

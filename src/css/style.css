@@ -193,9 +193,13 @@ blockquote {
   100% {
     transform: translateX(0); } }
 
-.branch-link {
+.header-link {
   text-decoration: none;
   color: #222; }
+  .header-link:hover {
+    text-decoration: underline; }
+  .header-link:focus-visible {
+    text-decoration: underline; }
 
 .back-home {
   display: inline-block;
