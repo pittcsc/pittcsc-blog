@@ -235,6 +235,35 @@ blockquote {
   }
 }
 
+.post-title-tag {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.25rem;
+
+  .tag-text {
+    margin-top: 0px;
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid rgb(148, 148, 148); // color needs to be changed
+  }
+
+  .web {
+    color: $web-dev-tag;
+  }
+
+  .css {
+    color: $css-tag;
+  }
+
+  .react {
+    color: $react-tag;
+  }
+
+  .html {
+    color: $html-tag;
+  }
+}
+
 .post-like {
   margin: 0;
   text-decoration: none;
