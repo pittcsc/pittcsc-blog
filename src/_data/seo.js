@@ -1,7 +1,8 @@
 module.exports = {
   baseURL: "https://eleventy-branches.netlify.app/",
-  title: "Web Dev - A Pitt CSC Branch",
-  description: "Blog for the Web Dev Pitt Computer Science Club Branch",
+  title: "Pitt Computer Science Club Blog",
+  description:
+    "Blog posts and articles written by members of the computer science club at the University of Pittsburgh.",
   twitter: "pittcsc",
-  image: "/images/Pitt_CSC_Blog_OG_Image.png",
+  image: "/Pitt_CSC_Blog_OG_Image.png",
 };

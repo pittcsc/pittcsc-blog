@@ -29,18 +29,18 @@
 
     {%- block seo -%}
     <!--Twitter Card-->
-    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:title" content="{{ title }} | {{ seo.title }}" />
     <meta name="twitter:description" content="{{ seo.description }}" />
 
     <!--Schema-->
-    <meta itemprop="name" content="{{ title }}" />
+    <meta itemprop="name" content="{{ title }} | {{ seo.title }}" />
     <meta name="description" content="{{ seo.description }}" />
 
     <!-- Facebook OpenGraph -->
-    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:title" content="{{ title }} | {{ seo.title }}" />
     <meta property="og:description" content="{{ seo.description }}" />
     {%- endblock -%}
-    <title>{{ title }}</title>
+    <title>{{ title }} | {{ seo.title }}</title>
   </head>
   <body>
     <div><a href="/" class="header-link">The Pitt CSC Blog</a></div>
