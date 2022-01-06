@@ -13,6 +13,11 @@ $special-color: #8fbc8b;
   margin: 0;
 }
 
+*::selection {
+  background-color: $pitt-dark-blue;
+  color: white;
+}
+
 /* Layout */
 
 body {
@@ -139,15 +144,27 @@ blockquote {
 
 .page-title {
   position: relative;
-  font-size: Max(5vw, 2.5rem);
   height: 100%;
+  overflow: hidden;
+  // padding: 1rem;
+  // animation: no-overflow 800ms ease forwards;
+  // animation-delay: 800ms;
+
+  h1 {
+    padding: 1rem;
+    font-size: Max(5vw, 2.5rem);
+    animation: text-overflow 800ms ease forwards;
+    // height: 100%;
+  }
 
   &::before {
     content: "";
     position: absolute;
     height: 100%;
-    border-left: 2px solid $special-color;
-    left: -0.75rem;
+    border-left: 2px solid $pitt-yellow;
+    left: 0rem;
+    // animation: text-overflow-accent 800ms ease forwards;
+    // animation-delay: 800ms;
   }
 }
 
@@ -184,7 +201,7 @@ blockquote {
         font-weight: bold;
         font-size: 1.5rem;
         text-decoration: underline;
-        text-decoration-color: $special-color;
+        text-decoration-color: $pitt-yellow;
       }
 
       .post-date {
@@ -240,9 +257,27 @@ blockquote {
   }
 }
 
-.branch-link {
+@keyframes text-overflow {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.header-link {
   text-decoration: none;
   color: #222;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
+  }
 }
 
 .back-home {
@@ -269,5 +304,18 @@ blockquote {
     p {
       font-weight: bold;
     }
+  }
+}
+
+.footer-link {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
   }
 }

@@ -5,58 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-        <!--Twitter Card-->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@{{seo.twitter}}">
-    <meta name="twitter:creator" content="@{{seo.twitter}}">
-    <meta name="twitter:url" content="{{seo.baseURL}}{{page.url}}">
+    <!--Twitter Card-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{{ seo.twitter }}" />
+    <meta name="twitter:creator" content="@{{ seo.twitter }}" />
+    <meta name="twitter:url" content="{{ seo.baseURL }}{{ page.url }}" />
+    <meta name="twitter:image" content="{{ seo.baseURL }}{{ seo.image }}" />
 
     <!--Schema-->
-    <link rel="author" href="{{seo.baseURL}}">
-    <link rel="publisher" href="{{seo.baseURL}}">
-        
+    <link rel="author" href="{{ seo.baseURL }}" />
+    <link rel="publisher" href="{{ seo.baseURL }}" />
+
     <!-- Facebook OpenGraph -->
-    <meta property="og:url" content="{{seo.baseURL}}{{page.url}}">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="{{seo.title}}">
-    <meta property="og:locale" content="en_AU">
-    <meta property="article:author" content="{{seo.baseURL}}">
-    
+    <meta property="og:url" content="{{ seo.baseURL }}{{ page.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ seo.title }}" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:image" content="{{ seo.baseURL }}{{ seo.image }}" />
+    <meta property="article:author" content="{{ seo.baseURL }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
     {%- block seo -%}
     <!--Twitter Card-->
-    <meta name="twitter:title" content="{{title}}">
-    <meta name="twitter:description" content="{{ seo.description }}">
-    
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ seo.description }}" />
+
     <!--Schema-->
-    <meta itemprop="name" content="{{title}}">
-    <meta name="description" content="{{ seo.description }}">
-    
+    <meta itemprop="name" content="{{ title }}" />
+    <meta name="description" content="{{ seo.description }}" />
+
     <!-- Facebook OpenGraph -->
-    <meta property="og:title" content="{{title}}">
-    <meta property="og:description" content="{{ seo.description }}">
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ seo.description }}" />
     {%- endblock -%}
-    <title>Web Dev - A Pitt CSC Branch</title>
+    <title>The Pitt CSC Blog</title>
   </head>
   <body>
-    <div><a href="https://pittcsc.org/" class="branch-link">A Pitt CSC Branch 🌿</a></div>
+    <div>
+      {#
+      <a href="https://pittcsc.org/" class="branch-link">Go to Main Site</a> #}
+    </div>
     <header>
-      <h1 class="page-title">Web Dev</h1>
+      <div class="page-title">
+        <h1>Pitt CSC Blog</h1>
+      </div>
     </header>
     <main>
       <article>
+        <h2 class="subheading">Featured Posts</h2>
         <ul class="post-list">
-          {% for post in collections.posts %} 
-            <li>
-              <a href={{post.url}} class="post-block">
-                <div class="post-title">{{post.data.title}}</div>
-                <div class="post-author">By {{post.data.author}}</div>
-                <div class="post-date">{{ post.date.toUTCString().substring(0, 16) }}</div>
-              </a>
-            </li>
+          {% for post in collections.posts %}
+          <li>
+            <a href="{{ post.url }}" class="post-block">
+              <div class="post-title">{{ post.data.title }}</div>
+              <div class="post-author">By {{ post.data.author }}</div>
+              <div class="post-date">
+                {{ post.date.toUTCString().substring(0, 16) }}
+              </div>
+            </a>
+          </li>
           {%- endfor %}
         </ul>
       </article>
     </main>
-    <footer>&copy; 2021 Pitt Computer Science Club</footer>
+    <footer>
+      &copy;
+      <a
+        href="https://pittcsc.org/"
+        aria-label="Main Pitt CSC Website"
+        class="footer-link"
+        >2021 Pitt Computer Science Club</a
+      >
+    </footer>
   </body>
 </html>
