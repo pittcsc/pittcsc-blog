@@ -307,15 +307,20 @@ blockquote {
   }
 }
 
-.footer-link {
-  color: black;
-  text-decoration: none;
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .footer-link {
+    color: black;
+    text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+      text-decoration: underline;
+    }
 
-  &:focus-visible {
-    text-decoration: underline;
+    &:focus-visible {
+      text-decoration: underline;
+    }
   }
 }

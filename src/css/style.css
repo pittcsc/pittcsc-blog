@@ -221,10 +221,14 @@ blockquote {
     .post-footer .other-posts p {
       font-weight: bold; }
 
-.footer-link {
-  color: black;
-  text-decoration: none; }
-  .footer-link:hover {
-    text-decoration: underline; }
-  .footer-link:focus-visible {
-    text-decoration: underline; }
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .page-footer .footer-link {
+    color: black;
+    text-decoration: none; }
+    .page-footer .footer-link:hover {
+      text-decoration: underline; }
+    .page-footer .footer-link:focus-visible {
+      text-decoration: underline; }

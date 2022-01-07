@@ -52,7 +52,20 @@
     <main>
       <article>{{ content | safe }}</article>
     </main>
-    <footer>&copy; 2021 Pitt Computer Science Club</footer>
+    <footer class="page-footer">
+      <a
+        href="https://pittcsc.org/"
+        aria-label="Main Pitt CSC Website"
+        class="footer-link"
+      >
+        &copy; 2021 Pitt Computer Science Club</a
+      >
+      <a
+        href="https://github.com/GameDog9988/pittcsc-blog/blob/main/CONTRIBUTING.md"
+        class="footer-link"
+        >Contribute</a
+      >
+    </footer>
     <script src="{{ '/js/index.js' | url }}"></script>
   </body>
 </html>
