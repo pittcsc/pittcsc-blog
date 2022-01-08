@@ -1,7 +1,7 @@
 ---
 title: How to Animate with CSS
 author: Alexander Grattan
-tag: ["web dev", "css"]
+tags: ["web dev", "css"]
 date: 2021-12-19
 ---
 

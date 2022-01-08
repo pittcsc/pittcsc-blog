@@ -1,7 +1,7 @@
 ---
 title: Understanding React (for Dummies)
 author: Niccolo Nobili
-tag: ["react", "web dev"]
+tags: ["web dev", "react"]
 date: 2022-01-03
 ---
 

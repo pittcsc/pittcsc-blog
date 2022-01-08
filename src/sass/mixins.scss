@@ -1,0 +1,32 @@
+@mixin post-tag {
+  display: flex;
+  flex-direction: row;
+
+  .tag-text {
+    margin-top: 0 !important;
+    padding: 0.25rem 0.5rem;
+    color: black;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .web {
+    background-color: $web-dev-tag;
+  }
+
+  .css {
+    background-color: $css-tag;
+  }
+
+  .react {
+    background-color: $react-tag;
+  }
+
+  .html {
+    background-color: $html-tag;
+  }
+}
