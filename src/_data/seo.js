@@ -1,5 +1,5 @@
 module.exports = {
-  baseURL: "https://eleventy-branches.netlify.app/",
+  baseURL: "https://pittcsc-blog.netlify.app/",
   title: "Pitt Computer Science Club Blog",
   description:
     "Blog posts and articles written by members of the computer science club at the University of Pittsburgh.",
