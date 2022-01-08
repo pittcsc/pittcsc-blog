@@ -1,6 +1,7 @@
 ---
 title: Material UI is Stupid
 author: Niccolo Nobili
+tag: ["web dev"]
 date: 2021-12-20
 ---
 
