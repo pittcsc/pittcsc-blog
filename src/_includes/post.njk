@@ -16,19 +16,26 @@ layout: base.njk
  <div class="other-posts">
   <p class="other-posts-title">Other posts</p>
          <ul class="post-list">
-          {% for post in collections.posts %} 
-            <li>
-              <a href={{post.url}} class="post-block">
-                <div class="post-title">{{post.data.title}}</div>
-                <div class="post-tag">
-                  {% for tag in post.data.tag %}
-                    <p class="tag-text {{tag}}">{{tag}}</p>
-                  {%- endfor %}
-                </div>
-                <div class="post-author">By {{post.data.author}}</div>
-                <div class="post-date">{{ post.date.toUTCString().substring(0, 16) }}</div>
-              </a>
-            </li>
+          {% for post in collections.posts  %} 
+          <li>
+            <div class="post-block">
+              <a href="{{ post.url }}" class="post-title">{{
+                post.data.title
+              }}</a>
+              <div class="post-tag">
+                {% for tag in post.data.tags | filterTagList %} {% set tagUrl
+                %}/tags/{{ tag | slug }}/{% endset %}
+                <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
+                  tag
+                }}</a>
+                {% endfor %}
+              </div>
+              <div class="post-author">By {{ post.data.author }}</div>
+              <div class="post-date">
+                {{ post.date.toUTCString().substring(0, 16) }}
+              </div>
+            </div>
+          </li>
           {%- endfor %}
         </ul>
  </div>

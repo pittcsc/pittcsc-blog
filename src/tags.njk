@@ -1,3 +1,19 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: Tagged “{{ tag }}”
+permalink: /tags/{{ tag | slug }}/
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,20 +59,17 @@
     <title>The Pitt CSC Blog</title>
   </head>
   <body>
-    <div>
-      {#
-      <a href="https://pittcsc.org/" class="branch-link">Go to Main Site</a> #}
-    </div>
+    <div><a href="/" class="header-link">The Pitt CSC Blog</a></div>
     <header>
       <div class="page-title">
-        <h1>Pitt CSC Blog</h1>
+        <h1>Tagged "{{tag}}"</h1>
       </div>
     </header>
     <main>
       <article>
         <h2 class="subheading">Featured Posts</h2>
         <ul class="post-list">
-          {% for post in collections.posts %}
+          {% for post in collections[ tag ] %}
           <li>
             <div class="post-block">
               <a href="{{ post.url }}" class="post-title">{{
