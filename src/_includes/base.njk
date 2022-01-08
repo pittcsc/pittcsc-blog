@@ -48,6 +48,11 @@
       <div class="page-title">
         <h1>{{ title }}</h1>
       </div>
+      <div class="post-title-tag">
+        {% for tag in tag %}
+        <p class="tag-text {{ tag }}">{{ tag }}</p>
+        {%- endfor %}
+      </div>
     </header>
     <main>
       <article>{{ content | safe }}</article>

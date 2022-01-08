@@ -152,10 +152,45 @@ blockquote {
       font-size: 1.5rem;
       text-decoration: underline;
       text-decoration-color: #ffb81c; }
+    .post-list li .post-block .post-tag {
+      display: flex;
+      flex-direction: row;
+      font-size: 1.25rem; }
+      .post-list li .post-block .post-tag .tag-text {
+        margin-top: 0px;
+        padding-right: 8px;
+        margin-right: 8px;
+        border-right: 1px solid #949494; }
+      .post-list li .post-block .post-tag .web {
+        color: #146400; }
+      .post-list li .post-block .post-tag .css {
+        color: #0b00a0; }
+      .post-list li .post-block .post-tag .react {
+        color: #d88500; }
+      .post-list li .post-block .post-tag .html {
+        color: #cc00bb; }
     .post-list li .post-block .post-date {
       margin: 0; }
     .post-list li .post-block:hover {
       transform: scale(1.01); }
+
+.post-title-tag {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.25rem; }
+  .post-title-tag .tag-text {
+    margin-top: 0px;
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid #949494; }
+  .post-title-tag .web {
+    color: #146400; }
+  .post-title-tag .css {
+    color: #0b00a0; }
+  .post-title-tag .react {
+    color: #d88500; }
+  .post-title-tag .html {
+    color: #cc00bb; }
 
 .post-like {
   margin: 0;

@@ -7,6 +7,14 @@ $pitt-gold: #cdb87e;
 
 $special-color: #8fbc8b;
 
+$divisor-color: #000000;
+
+// tag colors
+$web-dev-tag: #146400;
+$css-tag: #0b00a0;
+$react-tag: #d88500;
+$html-tag: #cc00bb;
+
 /* Very Smol Reset */
 * {
   box-sizing: border-box;
@@ -204,6 +212,35 @@ blockquote {
         text-decoration-color: $pitt-yellow;
       }
 
+      .post-tag {
+        display: flex;
+        flex-direction: row;
+        font-size: 1.25rem;
+
+        .tag-text {
+          margin-top: 0px;
+          padding-right: 8px;
+          margin-right: 8px;
+          border-right: 1px solid rgb(148, 148, 148); // color needs to be changed
+        }
+
+        .web {
+          color: $web-dev-tag;
+        }
+
+        .css {
+          color: $css-tag;
+        }
+
+        .react {
+          color: $react-tag;
+        }
+
+        .html {
+          color: $html-tag;
+        }
+      }
+
       .post-date {
         margin: 0;
       }
@@ -212,6 +249,35 @@ blockquote {
         transform: scale(1.01);
       }
     }
+  }
+}
+
+.post-title-tag {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.25rem;
+
+  .tag-text {
+    margin-top: 0px;
+    padding-right: 8px;
+    margin-right: 8px;
+    border-right: 1px solid rgb(148, 148, 148); // color needs to be changed
+  }
+
+  .web {
+    color: $web-dev-tag;
+  }
+
+  .css {
+    color: $css-tag;
+  }
+
+  .react {
+    color: $react-tag;
+  }
+
+  .html {
+    color: $html-tag;
   }
 }
 
