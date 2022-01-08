@@ -222,6 +222,9 @@ blockquote {
           padding-right: 8px;
           margin-right: 8px;
           border-right: 1px solid rgb(148, 148, 148); // color needs to be changed
+          &:last-child {
+            border: none;
+          }
         }
 
         .web {

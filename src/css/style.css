@@ -161,6 +161,8 @@ blockquote {
         padding-right: 8px;
         margin-right: 8px;
         border-right: 1px solid #949494; }
+        .post-list li .post-block .post-tag .tag-text:last-child {
+          border: none; }
       .post-list li .post-block .post-tag .web {
         color: #146400; }
       .post-list li .post-block .post-tag .css {
