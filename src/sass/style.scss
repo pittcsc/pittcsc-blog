@@ -162,7 +162,7 @@ blockquote {
 
   h1 {
     padding: 1rem;
-    font-size: Max(5vw, 2.5rem);
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
     animation: text-overflow 800ms ease forwards;
     // height: 100%;
   }

@@ -114,7 +114,7 @@ blockquote {
   overflow: hidden; }
   .page-title h1 {
     padding: 1rem;
-    font-size: Max(5vw, 2.5rem);
+    font-size: clamp(2.5rem, 5vw, 5.5rem);
     animation: text-overflow 800ms ease forwards; }
   .page-title::before {
     content: "";
@@ -156,13 +156,12 @@ blockquote {
       display: flex;
       flex-direction: row; }
       .post-list li .post-block .post-tag .tag-text {
-        margin: 0 !important;
-        margin-right: 8px;
+        margin-top: 0 !important;
         padding: 0.25rem 0.5rem;
         color: black;
         font-size: 1rem; }
-        .post-list li .post-block .post-tag .tag-text:last-child {
-          border: none; }
+        .post-list li .post-block .post-tag .tag-text:hover {
+          text-decoration: underline; }
       .post-list li .post-block .post-tag .web {
         background-color: #fef3c7; }
       .post-list li .post-block .post-tag .css {
@@ -183,13 +182,12 @@ blockquote {
   display: flex;
   flex-direction: row; }
   .post-title-tag .tag-text {
-    margin: 0 !important;
-    margin-right: 8px;
+    margin-top: 0 !important;
     padding: 0.25rem 0.5rem;
     color: black;
     font-size: 1rem; }
-    .post-title-tag .tag-text:last-child {
-      border: none; }
+    .post-title-tag .tag-text:hover {
+      text-decoration: underline; }
   .post-title-tag .web {
     background-color: #fef3c7; }
   .post-title-tag .css {
