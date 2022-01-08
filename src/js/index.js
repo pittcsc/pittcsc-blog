@@ -11,8 +11,6 @@ function registerLike(title) {
         return el !== title;
       });
 
-      console.log("Filtered Array", filteredArray);
-
       localStorage.setItem("likes", JSON.stringify(filteredArray));
     }
   } else {
