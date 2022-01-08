@@ -49,12 +49,12 @@ body > footer {
 
 body > footer div {
   border-top: 1px solid #ccc;
-  padding-top: 0.5em;
+  padding-top: 0.5rem;
   font-size: 0.9rem;
   color: #767676; }
 
 article * + * {
-  margin-top: 1em; }
+  margin-top: 1rem; }
 
 /* Typography */
 :is(h1, h2, h3) {
@@ -64,7 +64,7 @@ article * + * {
   max-width: 40ch; }
 
 :is(h2, h3):not(:first-child) {
-  margin-top: 2em; }
+  margin-top: 2rem; }
 
 a {
   color: navy;
@@ -154,45 +154,50 @@ blockquote {
       text-decoration-color: #ffb81c; }
     .post-list li .post-block .post-tag {
       display: flex;
-      flex-direction: row;
-      font-size: 1.25rem; }
+      flex-direction: row; }
       .post-list li .post-block .post-tag .tag-text {
-        margin-top: 0px;
-        padding-right: 8px;
+        margin: 0 !important;
         margin-right: 8px;
-        border-right: 1px solid #949494; }
+        padding: 0.25rem 0.5rem;
+        color: black;
+        font-size: 1rem; }
         .post-list li .post-block .post-tag .tag-text:last-child {
           border: none; }
       .post-list li .post-block .post-tag .web {
-        color: #146400; }
+        background-color: #fef3c7; }
       .post-list li .post-block .post-tag .css {
-        color: #0b00a0; }
+        background-color: #cffafe; }
       .post-list li .post-block .post-tag .react {
-        color: #d88500; }
+        background-color: #ecfccb; }
       .post-list li .post-block .post-tag .html {
-        color: #cc00bb; }
+        background-color: #ede9fe; }
+    .post-list li .post-block .post-author {
+      font-weight: bold; }
     .post-list li .post-block .post-date {
       margin: 0; }
     .post-list li .post-block:hover {
       transform: scale(1.01); }
 
 .post-title-tag {
+  margin-top: 1rem;
   display: flex;
-  flex-direction: row;
-  font-size: 1.25rem; }
+  flex-direction: row; }
   .post-title-tag .tag-text {
-    margin-top: 0px;
-    padding-right: 8px;
+    margin: 0 !important;
     margin-right: 8px;
-    border-right: 1px solid #949494; }
+    padding: 0.25rem 0.5rem;
+    color: black;
+    font-size: 1rem; }
+    .post-title-tag .tag-text:last-child {
+      border: none; }
   .post-title-tag .web {
-    color: #146400; }
+    background-color: #fef3c7; }
   .post-title-tag .css {
-    color: #0b00a0; }
+    background-color: #cffafe; }
   .post-title-tag .react {
-    color: #d88500; }
+    background-color: #ecfccb; }
   .post-title-tag .html {
-    color: #cc00bb; }
+    background-color: #ede9fe; }
 
 .post-like {
   margin: 0;
@@ -255,7 +260,7 @@ blockquote {
       font-weight: bold; }
   .post-footer .other-posts {
     margin-top: 4rem; }
-    .post-footer .other-posts p {
+    .post-footer .other-posts .other-posts-title {
       font-weight: bold; }
 
 .page-footer {
