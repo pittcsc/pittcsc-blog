@@ -1,7 +1,8 @@
 ---
 title: Configuration
 author: Niccolo Nobili
-tag: ["web dev"]
+tags:
+  - "web dev"
 date: 2022-01-03
 ---
 
