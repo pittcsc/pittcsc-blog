@@ -151,7 +151,8 @@ blockquote {
       font-weight: bold;
       font-size: 1.5rem;
       text-decoration: underline;
-      text-decoration-color: #ffb81c; }
+      text-decoration-color: #ffb81c;
+      color: black; }
     .post-list li .post-block .post-tag {
       display: flex;
       flex-direction: row; }
@@ -159,7 +160,9 @@ blockquote {
         margin-top: 0 !important;
         padding: 0.25rem 0.5rem;
         color: black;
-        font-size: 1rem; }
+        font-size: 1rem;
+        display: block;
+        text-decoration: none; }
         .post-list li .post-block .post-tag .tag-text:hover {
           text-decoration: underline; }
       .post-list li .post-block .post-tag .web {
@@ -185,7 +188,9 @@ blockquote {
     margin-top: 0 !important;
     padding: 0.25rem 0.5rem;
     color: black;
-    font-size: 1rem; }
+    font-size: 1rem;
+    display: block;
+    text-decoration: none; }
     .post-title-tag .tag-text:hover {
       text-decoration: underline; }
   .post-title-tag .web {
