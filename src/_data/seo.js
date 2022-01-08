@@ -4,5 +4,5 @@ module.exports = {
   description:
     "Blog posts and articles written by members of the computer science club at the University of Pittsburgh.",
   twitter: "pittcsc",
-  image: "Pitt_CSC_Blog_OG_Image.png",
+  image: "/images/Pitt_CSC_Blog_OG_Image.png",
 };
