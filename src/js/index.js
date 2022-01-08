@@ -26,7 +26,7 @@ const isPresent = (element) =>
   element === likeButton.getAttribute("data-title");
 
 if (l != null || l != undefined) {
-  if (!l.some(isPresent)) {
+  if (l.some(isPresent)) {
     likeButton.classList.add("filled-heart");
   }
 }
