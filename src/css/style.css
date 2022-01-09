@@ -277,3 +277,21 @@ blockquote {
       text-decoration: underline; }
     .page-footer .footer-link:focus-visible {
       text-decoration: underline; }
+
+.home-pagination {
+  position: relative; }
+  .home-pagination a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .home-pagination a:hover {
+      text-decoration: underline; }
+    .home-pagination a:focus-visible {
+      text-decoration: underline; }
+  .home-pagination .previous-link {
+    left: 0; }
+  .home-pagination .next-link {
+    right: 0; }
