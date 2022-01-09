@@ -30,3 +30,19 @@
     background-color: $html-tag;
   }
 }
+
+@mixin outline-button {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 2px solid gainsboro;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}

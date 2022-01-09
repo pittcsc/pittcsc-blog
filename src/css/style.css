@@ -1,113 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/* Very Smol Reset */
-* {
-  box-sizing: border-box;
-  margin: 0; }
-
-*::selection {
-  background-color: #243e8b;
-  color: white; }
-
-/* Layout */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
-  line-height: 1.5;
+.header-link {
+  text-decoration: none;
   color: #222; }
+  .header-link:hover {
+    text-decoration: underline; }
+  .header-link:focus-visible {
+    text-decoration: underline; }
 
-body > * {
-  --layout-spacing: Max(8vh, 3rem);
-  --max-width: 70ch;
-  width: Min(100%, var(--max-width));
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Poppins", sans-serif; }
-
-nav ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin-left: -1rem;
-  margin-right: -1rem; }
-  nav ul li {
-    padding: 0.5rem 1rem; }
-
-nav [aria-current="page"] {
-  font-weight: bold; }
-
-header,
-main,
-main > * + * {
-  margin-top: var(--layout-spacing); }
-
-body > footer {
-  margin-top: auto;
-  padding-top: var(--layout-spacing); }
-
-body > footer div {
-  border-top: 1px solid #ccc;
-  padding-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #767676; }
-
-article * + * {
-  margin-top: 1rem; }
-
-/* Typography */
-:is(h1, h2, h3) {
-  line-height: 1.2; }
-
-:is(h1, h2) {
-  max-width: 40ch; }
-
-:is(h2, h3):not(:first-child) {
-  margin-top: 2rem; }
-
-a {
-  color: navy;
-  text-underline-offset: 0.08em; }
-
-a:focus {
-  outline: none; }
-
-a:focus-visible {
-  outline: 2px solid gainsboro;
-  outline-offset: 0.2em; }
-
-/* Media */
-article img {
-  display: block;
-  width: 100%;
-  min-height: 20rem;
-  max-height: 40vh;
-  object-fit: cover;
-  margin: 2rem auto; }
-
-@supports (aspect-ratio: 1) {
-  article img {
-    max-height: unset;
-    aspect-ratio: 3/2; } }
-
-/* Supporting Content */
-code:not([class*="language"]) {
-  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  font-size: 1.75ex;
-  color: #444;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding-right: 0.15em;
-  padding-left: 0.15em; }
-
-blockquote {
-  margin: 2rem 0;
-  padding: 0.5em 1rem;
-  border-left: 3px solid rgba(0, 0, 0, 0.35);
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 0 0.25rem 0.25rem 0; }
-
-/* Custom Styles */
 .page-title {
   position: relative;
   height: 100%;
@@ -125,6 +24,57 @@ blockquote {
 
 .page-intro {
   font-size: Max(2vw, 1rem); }
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .page-footer .footer-link {
+    color: black;
+    text-decoration: none; }
+    .page-footer .footer-link:hover {
+      text-decoration: underline; }
+    .page-footer .footer-link:focus-visible {
+      text-decoration: underline; }
+
+.home-pagination {
+  position: relative; }
+  .home-pagination a {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .home-pagination a:hover {
+      text-decoration: underline; }
+    .home-pagination a:focus-visible {
+      text-decoration: underline; }
+  .home-pagination .previous-link {
+    left: 0; }
+  .home-pagination .next-link {
+    right: 0; }
+
+.view-all-link {
+  display: flex;
+  flex-direction: row; }
+  .view-all-link .tag-text {
+    margin-top: 0 !important;
+    padding: 0.25rem 0.5rem;
+    color: black;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none; }
+    .view-all-link .tag-text:hover {
+      text-decoration: underline; }
+  .view-all-link .web {
+    background-color: #fef3c7; }
+  .view-all-link .css {
+    background-color: #cffafe; }
+  .view-all-link .react {
+    background-color: #ecfccb; }
+  .view-all-link .html {
+    background-color: #ede9fe; }
 
 .post-list {
   list-style-type: none;
@@ -238,21 +188,6 @@ blockquote {
   100% {
     transform: translateX(0); } }
 
-.header-link {
-  text-decoration: none;
-  color: #222; }
-  .header-link:hover {
-    text-decoration: underline; }
-  .header-link:focus-visible {
-    text-decoration: underline; }
-
-.back-home {
-  display: inline-block;
-  text-decoration: none;
-  color: #222;
-  padding: 0.5rem 1rem;
-  border: 2px solid gainsboro; }
-
 .post-footer {
   margin-top: 4rem; }
   .post-footer .footer-metadata {
@@ -266,43 +201,131 @@ blockquote {
     .post-footer .other-posts .other-posts-title {
       font-weight: bold; }
 
-.page-footer {
+.back-home {
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  .page-footer .footer-link {
+  flex-direction: row; }
+  .back-home .tag-text {
+    margin-top: 0 !important;
+    padding: 0.25rem 0.5rem;
     color: black;
+    font-size: 1rem;
+    display: block;
     text-decoration: none; }
-    .page-footer .footer-link:hover {
+    .back-home .tag-text:hover {
       text-decoration: underline; }
-    .page-footer .footer-link:focus-visible {
-      text-decoration: underline; }
+  .back-home .web {
+    background-color: #fef3c7; }
+  .back-home .css {
+    background-color: #cffafe; }
+  .back-home .react {
+    background-color: #ecfccb; }
+  .back-home .html {
+    background-color: #ede9fe; }
 
-.home-pagination {
-  position: relative; }
-  .home-pagination a {
-    position: absolute;
-    text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .home-pagination a:hover {
-      text-decoration: underline; }
-    .home-pagination a:focus-visible {
-      text-decoration: underline; }
-  .home-pagination .previous-link {
-    left: 0; }
-  .home-pagination .next-link {
-    right: 0; }
+/* Very Smol Reset */
+* {
+  box-sizing: border-box;
+  margin: 0; }
 
-.view-all-link {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  padding: 0.5rem 1rem;
-  border: 2px solid gainsboro; }
-  .view-all-link:hover {
-    text-decoration: underline; }
-  .view-all-link:focus-visible {
-    text-decoration: underline; }
+*::selection {
+  background-color: #243e8b;
+  color: white; }
+
+/* Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 5vh clamp(1rem, 5vw, 3rem) 1rem;
+  line-height: 1.5;
+  color: #222; }
+
+body > * {
+  --layout-spacing: Max(8vh, 3rem);
+  --max-width: 70ch;
+  width: Min(100%, var(--max-width));
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif; }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-left: -1rem;
+  margin-right: -1rem; }
+  nav ul li {
+    padding: 0.5rem 1rem; }
+
+nav [aria-current="page"] {
+  font-weight: bold; }
+
+header,
+main,
+main > * + * {
+  margin-top: var(--layout-spacing); }
+
+body > footer {
+  margin-top: auto;
+  padding-top: var(--layout-spacing); }
+
+body > footer div {
+  border-top: 1px solid #ccc;
+  padding-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #767676; }
+
+article * + * {
+  margin-top: 1rem; }
+
+/* Typography */
+:is(h1, h2, h3) {
+  line-height: 1.2; }
+
+:is(h1, h2) {
+  max-width: 40ch; }
+
+:is(h2, h3):not(:first-child) {
+  margin-top: 2rem; }
+
+a {
+  color: navy;
+  text-underline-offset: 0.08em; }
+
+a:focus {
+  outline: none; }
+
+a:focus-visible {
+  outline: 2px solid gainsboro;
+  outline-offset: 0.2em; }
+
+/* Media */
+article img {
+  display: block;
+  width: 100%;
+  min-height: 20rem;
+  max-height: 40vh;
+  object-fit: cover;
+  margin: 2rem auto; }
+
+@supports (aspect-ratio: 1) {
+  article img {
+    max-height: unset;
+    aspect-ratio: 3/2; } }
+
+/* Supporting Content */
+code:not([class*="language"]) {
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  font-size: 1.75ex;
+  color: #444;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-right: 0.15em;
+  padding-left: 0.15em; }
+
+blockquote {
+  margin: 2rem 0;
+  padding: 0.5em 1rem;
+  border-left: 3px solid rgba(0, 0, 0, 0.35);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0 0.25rem 0.25rem 0; }
