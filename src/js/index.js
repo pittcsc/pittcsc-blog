@@ -1,4 +1,9 @@
-function registerLike(title) {
+import supabase from "./supabase.js";
+
+async function registerLike(title) {
+  const { data, error } = await supabase.from("posts").select();
+  console.log(data, error);
+
   const l = JSON.parse(localStorage.getItem("likes"));
 
   const isPresent = (element) => element === title;
@@ -31,8 +36,7 @@ if (l != null || l != undefined) {
   }
 }
 
-likeButton.addEventListener("click", () => {
+likeButton.addEventListener("click", async () => {
+  registerLike(likeButton.getAttribute("data-title"));
   likeButton.classList.toggle("filled-heart");
-  console.log(likeButton);
-  console.log(likeButton.classList);
 });
