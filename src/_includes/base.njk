@@ -48,13 +48,6 @@
       <div class="page-title">
         <h1>{{ title }}</h1>
       </div>
-      <div class="post-title-tag">
-        {% for tag in tags | filterTagList %} {% set tagUrl %}/tags/{{
-          tag | slug
-        }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{ tag }}</a>
-        {% endfor %}
-      </div>
     </header>
     <main>
       <article>{{ content | safe }}</article>
