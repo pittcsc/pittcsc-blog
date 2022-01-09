@@ -16,6 +16,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("filterTagList", filterTagList);
 
+  eleventyConfig.addFilter("log", (value) => {
+    console.log(value);
+  });
+
   return {
     dir: {
       input: "src",
