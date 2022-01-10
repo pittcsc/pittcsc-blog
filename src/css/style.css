@@ -56,25 +56,15 @@
     right: 0; }
 
 .view-all-link {
-  display: flex;
-  flex-direction: row; }
-  .view-all-link .tag-text {
-    margin-top: 0 !important;
-    padding: 0.25rem 0.5rem;
-    color: black;
-    font-size: 1rem;
-    display: block;
-    text-decoration: none; }
-    .view-all-link .tag-text:hover {
-      text-decoration: underline; }
-  .view-all-link .web {
-    background-color: #fef3c7; }
-  .view-all-link .css {
-    background-color: #cffafe; }
-  .view-all-link .react {
-    background-color: #ecfccb; }
-  .view-all-link .html {
-    background-color: #ede9fe; }
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 2px solid gainsboro; }
+  .view-all-link:hover {
+    text-decoration: underline; }
+  .view-all-link:focus-visible {
+    text-decoration: underline; }
 
 .post-list {
   list-style-type: none;
