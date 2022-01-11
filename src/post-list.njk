@@ -1,0 +1,40 @@
+---
+title: All Posts
+layout: base.njk
+pagination:
+  data: collections.posts
+  size: 3
+  alias: posts
+---
+
+ <ul class="post-list">
+          {% for post in posts %}
+          <li>
+            <div class="post-block">
+              <a href="{{ post.url }}" class="post-title">{{
+                post.data.title
+              }}</a>
+              <div class="post-tag">
+                {% for tag in post.data.tags | filterTagList %} {% set tagUrl
+                %}/tags/{{ tag | slug }}/{% endset %}
+                <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
+                  tag
+                }}</a>
+                {% endfor %}
+              </div>
+              <div class="post-author">By {{ post.data.author }}</div>
+              <div class="post-date">
+                {{ post.date.toUTCString().substring(0, 16) }}
+              </div>
+            </div>
+          </li>
+          {%- endfor %}
+        </ul>
+        <div class="home-pagination">
+        {% if pagination.href.previous %}
+        <a href="{{ pagination.href.previous }}" class="previous-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"/></svg> Previous Page</a>
+        {% endif %} 
+        {% if pagination.href.next %}
+        <a href="{{ pagination.href.next }}" class="next-link">Next Page <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"/></svg></a>
+        {% endif %}
+        </div>

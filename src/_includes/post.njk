@@ -1,44 +1,139 @@
----
-layout: base.njk
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <!--Twitter Card-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@{{ seo.twitter }}" />
+    <meta name="twitter:creator" content="@{{ seo.twitter }}" />
+    <meta name="twitter:url" content="{{ seo.baseURL }}{{ page.url }}" />
+    <meta name="twitter:image" content="{{ seo.baseURL }}{{ seo.image }}" />
 
-{{ content | safe}}
+    <!--Schema-->
+    <link rel="author" href="{{ seo.baseURL }}" />
+    <link rel="publisher" href="{{ seo.baseURL }}" />
 
-<footer class="post-footer">
-<div class="footer-metadata">
-<div>
-    <p class="author">By {{author}}</p>
-    <p>Published on: {{ page.date.toUTCString().substring(0, 16) }}</p>
-  </div>
-  <button onclick='registerLike("{{title}}")' data-title='"{{title}}"' aria-label="Like the article" type="button"  id="likeButton" class="post-like"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
-</div>
+    <!-- Facebook OpenGraph -->
+    <meta property="og:url" content="{{ seo.baseURL }}{{ page.url }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ seo.title }}" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:image" content="{{ seo.baseURL }}{{ seo.image }}" />
+    <meta property="article:author" content="{{ seo.baseURL }}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 
- <div class="other-posts">
-  <p class="other-posts-title">Other posts</p>
-         <ul class="post-list">
-          {% for post in collections.posts  %} 
-          <li>
-            <div class="post-block">
-              <a href="{{ post.url }}" class="post-title">{{
-                post.data.title
-              }}</a>
-              <div class="post-tag">
-                {% for tag in post.data.tags | filterTagList %} {% set tagUrl
-                %}/tags/{{ tag | slug }}/{% endset %}
-                <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
-                  tag
+    {%- block seo -%}
+    <!--Twitter Card-->
+    <meta name="twitter:title" content="{{ title }} | {{ seo.title }}" />
+    <meta name="twitter:description" content="{{ seo.description }}" />
+
+    <!--Schema-->
+    <meta itemprop="name" content="{{ title }} | {{ seo.title }}" />
+    <meta name="description" content="{{ seo.description }}" />
+
+    <!-- Facebook OpenGraph -->
+    <meta property="og:title" content="{{ title }} | {{ seo.title }}" />
+    <meta property="og:description" content="{{ seo.description }}" />
+    {%- endblock -%}
+    <title>{{ title }} | {{ seo.title }}</title>
+  </head>
+  <body>
+    <div><a href="/" class="header-link">The Pitt CSC Blog</a></div>
+    <header>
+      <div class="page-title">
+        <h1>{{ title }}</h1>
+      </div>
+      <div class="post-title-tag">
+        {% for tag in tags | filterTagList %} {% set tagUrl %}/tags/{{
+          tag | slug
+        }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    </header>
+    <main>
+      <article>{{ content | safe }}</article>
+      <div class="post-footer">
+        <div class="footer-metadata">
+          <div>
+            <p class="author">By {{ author }}</p>
+            <p>Published on: {{ page.date.toUTCString().substring(0, 16) }}</p>
+          </div>
+          <button
+            onclick='registerLike("{{ title }}")'
+            data-title="{{ title }}"
+            aria-label="Like the article"
+            type="button"
+            id="likeButton"
+            class="post-like"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-heart"
+            >
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        {# <div class="other-posts">
+          <p class="other-posts-title">Other posts</p>
+          <ul class="post-list">
+            {% for post in collections.posts | log %}
+            <li>
+              <div class="post-block">
+                <a href="{{ post.url }}" class="post-title">{{
+                  post.data.title
                 }}</a>
-                {% endfor %}
+                <div class="post-tag">
+                  {% for tag in post.data.tags | filterTagList %} {% set tagUrl
+                  %}/tags/{{ tag | slug }}/{% endset %}
+                  <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
+                    tag
+                  }}</a>
+                  {% endfor %}
+                </div>
+                <div class="post-author">By {{ post.data.author }}</div>
+                <div class="post-date">
+                  {{ post.date.toUTCString().substring(0, 16) }}
+                </div>
               </div>
-              <div class="post-author">By {{ post.data.author }}</div>
-              <div class="post-date">
-                {{ post.date.toUTCString().substring(0, 16) }}
-              </div>
-            </div>
-          </li>
-          {%- endfor %}
-        </ul>
- </div>
+            </li>
+            {%- endfor %}
+          </ul>
+        </div> #}
 
- <a href="/" class="back-home">Back home</a>
-</footer>
+        <a href="/" class="back-home">Back home</a>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <a
+        href="https://pittcsc.org/"
+        aria-label="Main Pitt CSC Website"
+        class="footer-link"
+      >
+        &copy; 2021 Pitt Computer Science Club</a
+      >
+      <a
+        href="https://github.com/GameDog9988/pittcsc-blog/blob/main/CONTRIBUTING.md"
+        class="footer-link"
+        >Contribute</a
+      >
+    </footer>
+    <script src="{{ '/js/index.js' | url }}"></script>
+  </body>
+</html>
