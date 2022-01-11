@@ -55,16 +55,44 @@
   @include post-tag;
 }
 
-.post-like {
+.post-share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   text-decoration: none;
   color: #222;
   font-size: 2.5rem;
   line-height: normal;
-  padding: 0.5rem 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
   border: 2px solid gainsboro;
   cursor: pointer;
   transition: 0.3s ease;
+  background: none;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.post-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-decoration: none;
+  color: #222;
+  font-size: 2.5rem;
+  line-height: normal;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 2px solid gainsboro;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: none;
 
   &:hover {
     transform: translateY(-4px);
@@ -116,6 +144,11 @@
     .author {
       font-weight: bold;
     }
+    .post-footer-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
   }
 
   .other-posts {
@@ -127,5 +160,6 @@
 }
 
 .back-home {
-  @include post-tag;
+  @include outline-button;
+  margin-top: 1rem;
 }

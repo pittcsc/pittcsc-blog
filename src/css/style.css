@@ -142,16 +142,41 @@
   .post-title-tag .html {
     background-color: #ede9fe; }
 
-.post-like {
+.post-share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   text-decoration: none;
   color: #222;
   font-size: 2.5rem;
   line-height: normal;
-  padding: 0.5rem 1rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
   border: 2px solid gainsboro;
   cursor: pointer;
-  transition: 0.3s ease; }
+  transition: 0.3s ease;
+  background: none; }
+  .post-share:hover {
+    transform: translateY(-4px); }
+
+.post-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-decoration: none;
+  color: #222;
+  font-size: 2.5rem;
+  line-height: normal;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 2px solid gainsboro;
+  cursor: pointer;
+  transition: 0.3s ease;
+  background: none; }
   .post-like:hover {
     transform: translateY(-4px); }
   .post-like svg {
@@ -186,31 +211,26 @@
     justify-content: space-between; }
     .post-footer .footer-metadata .author {
       font-weight: bold; }
+    .post-footer .footer-metadata .post-footer-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem; }
   .post-footer .other-posts {
     margin-top: 4rem; }
     .post-footer .other-posts .other-posts-title {
       font-weight: bold; }
 
 .back-home {
-  display: flex;
-  flex-direction: row; }
-  .back-home .tag-text {
-    margin-top: 0 !important;
-    padding: 0.25rem 0.5rem;
-    color: black;
-    font-size: 1rem;
-    display: block;
-    text-decoration: none; }
-    .back-home .tag-text:hover {
-      text-decoration: underline; }
-  .back-home .web {
-    background-color: #fef3c7; }
-  .back-home .css {
-    background-color: #cffafe; }
-  .back-home .react {
-    background-color: #ecfccb; }
-  .back-home .html {
-    background-color: #ede9fe; }
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1rem;
+  border: 2px solid gainsboro;
+  margin-top: 1rem; }
+  .back-home:hover {
+    text-decoration: underline; }
+  .back-home:focus-visible {
+    text-decoration: underline; }
 
 /* Very Smol Reset */
 * {
