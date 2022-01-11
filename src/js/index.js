@@ -19,6 +19,7 @@ function registerLike(title) {
 }
 
 const likeButton = document.querySelector("#likeButton");
+const shareButton = document.querySelector("#shareButton");
 
 const l = JSON.parse(localStorage.getItem("likes"));
 
@@ -35,4 +36,21 @@ likeButton.addEventListener("click", () => {
   likeButton.classList.toggle("filled-heart");
   console.log(likeButton);
   console.log(likeButton.classList);
+});
+
+shareButton.addEventListener("click", () => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: "WebShare API Demo",
+        url: "https://codepen.io/ayoisaiah/pen/YbNazJ",
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  } else {
+    const cb = navigator.clipboard;
+    cb.writeText(window.location.href).then(() => alert("URL copied"));
+  }
 });
