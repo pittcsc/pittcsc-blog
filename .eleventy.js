@@ -16,6 +16,25 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("filterTagList", filterTagList);
 
+  // eleventyConfig.addCollection("tagList", function(collection) {
+  //   let tagSet = new Set();
+  //   collection.getAll().forEach(item => {
+  //     (item.data.tags || []).forEach(tag => tagSet.add(tag));
+  //   });
+
+  //   return tagSet;
+  // });
+
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(post => {
+      let curr = new Set(post.data.tags);
+      let temp = tagSet;
+      tagSet = new Set([...temp, ...curr]);
+    });
+    return tagSet;
+  });
+
   return {
     dir: {
       input: "src",
