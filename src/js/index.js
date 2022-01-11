@@ -20,6 +20,7 @@ function registerLike(title) {
 
 const likeButton = document.querySelector("#likeButton");
 const shareButton = document.querySelector("#shareButton");
+const shareButtonPopup = document.querySelector("#postSharePopup");
 
 const l = JSON.parse(localStorage.getItem("likes"));
 
@@ -50,7 +51,12 @@ shareButton.addEventListener("click", () => {
       })
       .catch(console.error);
   } else {
+    if (shareButtonPopup.classList.contains("popup-appear")) {
+      shareButtonPopup.classList.remove("popup-appear");
+    }
     const cb = navigator.clipboard;
-    cb.writeText(window.location.href).then(() => alert("URL copied"));
+    cb.writeText(window.location.href).then(() => {
+      shareButtonPopup.classList.toggle("popup-appear");
+    });
   }
 });
