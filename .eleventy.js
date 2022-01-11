@@ -16,14 +16,16 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("filterTagList", filterTagList);
 
-  // eleventyConfig.addCollection("tagList", function(collection) {
-  //   let tagSet = new Set();
-  //   collection.getAll().forEach(item => {
-  //     (item.data.tags || []).forEach(tag => tagSet.add(tag));
-  //   });
-
-  //   return tagSet;
-  // });
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+      if (item.data.tags != undefined) {
+        (item.data.tags || []).forEach(tag => tagSet.add(tag));
+      }
+    });
+    tagSet.delete("posts");
+    return tagSet;
+  });
 
   // eleventyConfig.addCollection("tagList", function(collection) {
   //   let tagSet = new Set();

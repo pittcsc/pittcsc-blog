@@ -65,15 +65,13 @@ pagination:
       <article>
         <h2 class="subheading">Tags</h2>
         <div class="post-tag">
-        {% for post in posts %}
-          {% for tag in post.data.tags | filterTagList %} {% set tagUrl
-          %}/tags/{{ tag | slug }}/{% endset %}
-          <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
-            tag
-          }}</a>
-          {% endfor %}
-        {% endfor %}
-        <div>
+                {% for tag in collections.tagList %} {% set tagUrl
+                %}/tags/{{ tag | slug }}/{% endset %}
+                <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
+                  tag
+                }}</a>
+                {% endfor %}
+              </div>
       </article>
     {# END NEW CODE #}
       <article>
