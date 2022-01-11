@@ -25,15 +25,15 @@ module.exports = function (eleventyConfig) {
   //   return tagSet;
   // });
 
-  eleventyConfig.addCollection("tagList", function(collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach(post => {
-      let curr = new Set(post.data.tags);
-      let temp = tagSet;
-      tagSet = new Set([...temp, ...curr]);
-    });
-    return tagSet;
-  });
+  // eleventyConfig.addCollection("tagList", function(collection) {
+  //   let tagSet = new Set();
+  //   collection.getAll().forEach(post => {
+  //     let curr = new Set(post.data.tags);
+  //     let temp = tagSet;
+  //     tagSet = new Set([...temp, ...curr]);
+  //   });
+  //   return tagSet;
+  // });
 
   return {
     dir: {
