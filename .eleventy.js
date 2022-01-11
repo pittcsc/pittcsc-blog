@@ -16,7 +16,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("filterTagList", filterTagList);
 
-<<<<<<< HEAD
   // eleventyConfig.addCollection("tagList", function(collection) {
   //   let tagSet = new Set();
   //   collection.getAll().forEach(item => {
@@ -34,10 +33,6 @@ module.exports = function (eleventyConfig) {
       tagSet = new Set([...temp, ...curr]);
     });
     return tagSet;
-=======
-  eleventyConfig.addFilter("log", (value) => {
-    console.log(value);
->>>>>>> main
   });
 
   return {
