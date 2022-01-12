@@ -113,6 +113,8 @@
         background-color: #ecfccb; }
       .post-list li .post-block .post-tag .html {
         background-color: #ede9fe; }
+      .post-list li .post-block .post-tag .interview {
+        background-color: #e4b9b0; }
     .post-list li .post-block .post-author {
       font-weight: bold; }
     .post-list li .post-block .post-date {
@@ -141,6 +143,8 @@
     background-color: #ecfccb; }
   .post-title-tag .html {
     background-color: #ede9fe; }
+  .post-title-tag .interview {
+    background-color: #e4b9b0; }
 
 .post-like {
   margin: 0;
@@ -211,6 +215,8 @@
     background-color: #ecfccb; }
   .back-home .html {
     background-color: #ede9fe; }
+  .back-home .interview {
+    background-color: #e4b9b0; }
 
 /* Very Smol Reset */
 * {
@@ -341,3 +347,5 @@ blockquote {
   background-color: #ecfccb; }
 .tag-list .html {
   background-color: #ede9fe; }
+.tag-list .interview {
+  background-color: #e4b9b0; }
