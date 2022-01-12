@@ -55,27 +55,6 @@
   @include post-tag;
 }
 
-.post-like {
-  margin: 0;
-  text-decoration: none;
-  color: #222;
-  font-size: 2.5rem;
-  line-height: normal;
-  padding: 0.5rem 1rem;
-  border: 2px solid gainsboro;
-  cursor: pointer;
-  transition: 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-  }
-
-  svg {
-    fill: transparent;
-    stroke: #ff2581;
-  }
-}
-
 .filled-heart svg {
   animation: fill-animation 300ms ease forwards;
 }
@@ -94,6 +73,28 @@
   100% {
     fill: #ff2581;
     transform: scale(1);
+  }
+}
+
+@keyframes popup-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(25px);
+  }
+
+  25% {
+    opacity: 100;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  75% {
+    opacity: 100;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(25px);
   }
 }
 
@@ -116,6 +117,85 @@
     .author {
       font-weight: bold;
     }
+    .post-footer-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+
+      .post-share-container {
+        position: relative;
+        .post-share-popup {
+          transition: opacity, transform 0.3s ease;
+          opacity: 0;
+          pointer-events: none;
+          position: absolute;
+          bottom: -40px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: gainsboro;
+          color: black;
+          width: 200px;
+          text-align: center;
+          padding: 0.25rem 0.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 0.8rem;
+        }
+        .post-share {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          text-decoration: none;
+          color: #222;
+          font-size: 2.5rem;
+          line-height: normal;
+          width: 48px;
+          height: 48px;
+          border-radius: 100%;
+          border: 2px solid gainsboro;
+          cursor: pointer;
+          transition: 0.3s ease;
+          background: none;
+
+          &:hover {
+            transform: translateY(-4px);
+          }
+        }
+
+        .popup-appear {
+          animation: forwards 2s popup-animation;
+        }
+      }
+
+      .post-like {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        text-decoration: none;
+        color: #222;
+        font-size: 2.5rem;
+        line-height: normal;
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        border: 2px solid gainsboro;
+        cursor: pointer;
+        transition: 0.3s ease;
+        background: none;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+
+        svg {
+          fill: transparent;
+          stroke: #ff2581;
+        }
+      }
+    }
   }
 
   .other-posts {
@@ -127,5 +207,6 @@
 }
 
 .back-home {
-  @include post-tag;
+  @include outline-button;
+  margin-top: 1rem;
 }
