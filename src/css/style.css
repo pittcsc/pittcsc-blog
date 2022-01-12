@@ -122,7 +122,6 @@
       flex-direction: row; }
       .post-list li .post-block .post-tag .tag-text {
         margin-top: 0 !important;
-        margin-right: 0.25rem;
         padding: 0.25rem 0.5rem;
         color: black;
         font-size: 1rem;
@@ -153,7 +152,6 @@
   flex-direction: row; }
   .post-title-tag .tag-text {
     margin-top: 0 !important;
-    margin-right: 0.25rem;
     padding: 0.25rem 0.5rem;
     color: black;
     font-size: 1rem;
