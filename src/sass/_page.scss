@@ -58,3 +58,7 @@
     }
   }
 }
+
+.tag-list {
+  @include tag-list;
+}
