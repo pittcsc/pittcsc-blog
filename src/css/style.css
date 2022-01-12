@@ -93,7 +93,7 @@
       text-decoration: underline;
       text-decoration-color: #ffb81c;
       color: black; }
-    .post-list li .post-block .post-tag {
+    .post-list li .post-block .s {
       display: flex;
       flex-direction: row; }
       .post-list li .post-block .post-tag .tag-text {
@@ -101,7 +101,7 @@
         padding: 0.25rem 0.5rem;
         color: black;
         font-size: 1rem;
-        display: block;
+        display: inline-block;
         text-decoration: none; }
         .post-list li .post-block .post-tag .tag-text:hover {
           text-decoration: underline; }
@@ -319,3 +319,25 @@ blockquote {
   border-left: 3px solid rgba(0, 0, 0, 0.35);
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 0 0.25rem 0.25rem 0; }
+
+.tag-list .tag-text {
+  margin-top: 0 !important;
+  padding: 0.25rem 0.5rem;
+  color: black;
+  font-size: 1rem;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.tag-list .tag-text:hover {
+  text-decoration: underline;
+}
+
+.tag-list .web {
+  background-color: #fef3c7; }
+.tag-list .css {
+  background-color: #cffafe; }
+.tag-list .react {
+  background-color: #ecfccb; }
+.tag-list .html {
+  background-color: #ede9fe; }
