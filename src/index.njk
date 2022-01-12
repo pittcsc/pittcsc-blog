@@ -61,6 +61,19 @@ pagination:
       </div>
     </header>
     <main>
+    {# START NEW CODE #}
+      <article>
+        <h2 class="subheading">Tags</h2>
+        <div class="tag-list">
+                {% for tag in collections.tagList %} {% set tagUrl
+                %}/tags/{{ tag | slug }}/{% endset %}
+                <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
+                  tag
+                }}</a>
+                {% endfor %}
+              </div>
+      </article>
+    {# END NEW CODE #}
       <article>
         <h2 class="subheading">Featured Posts</h2>
         <ul class="post-list">

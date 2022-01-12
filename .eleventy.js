@@ -16,9 +16,26 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("filterTagList", filterTagList);
 
-  eleventyConfig.addFilter("log", (value) => {
-    console.log(value);
+  eleventyConfig.addCollection("tagList", function(collection) {
+    let tagSet = new Set();
+    collection.getAll().forEach(item => {
+      if (item.data.tags != undefined) {
+        (item.data.tags || []).forEach(tag => tagSet.add(tag));
+      }
+    });
+    tagSet.delete("posts");
+    return tagSet;
   });
+
+  // eleventyConfig.addCollection("tagList", function(collection) {
+  //   let tagSet = new Set();
+  //   collection.getAll().forEach(post => {
+  //     let curr = new Set(post.data.tags);
+  //     let temp = tagSet;
+  //     tagSet = new Set([...temp, ...curr]);
+  //   });
+  //   return tagSet;
+  // });
 
   return {
     dir: {

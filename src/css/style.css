@@ -37,6 +37,30 @@
     .page-footer .footer-link:focus-visible {
       text-decoration: underline; }
 
+.tag-list {
+  display: flex;
+  flex-direction: row; }
+  .tag-list .tag-text {
+    margin-top: 0 !important;
+    margin-right: 0.25rem !important;
+    padding: 0.25rem 0.5rem;
+    color: black;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none; }
+    .tag-list .tag-text:hover {
+      text-decoration: underline; }
+  .tag-list .web {
+    background-color: #fef3c7; }
+  .tag-list .css {
+    background-color: #cffafe; }
+  .tag-list .react {
+    background-color: #ecfccb; }
+  .tag-list .html {
+    background-color: #ede9fe; }
+  .tag-list .interview {
+    background-color: #e4b9b0; }
+
 .home-pagination {
   position: relative; }
   .home-pagination a {
@@ -113,6 +137,8 @@
         background-color: #ecfccb; }
       .post-list li .post-block .post-tag .html {
         background-color: #ede9fe; }
+      .post-list li .post-block .post-tag .interview {
+        background-color: #e4b9b0; }
     .post-list li .post-block .post-author {
       font-weight: bold; }
     .post-list li .post-block .post-date {
@@ -141,6 +167,8 @@
     background-color: #ecfccb; }
   .post-title-tag .html {
     background-color: #ede9fe; }
+  .post-title-tag .interview {
+    background-color: #e4b9b0; }
 
 .filled-heart svg {
   animation: fill-animation 300ms ease forwards; }
