@@ -83,9 +83,17 @@ permalink: /tags/{{ tag | slug }}/
                 }}</a>
                 {% endfor %}
               </div>
+              {% if post.data.author %}
+              <div class="post-author">By {{ post.data.author }}</div>
+              {% endif %}
+              {% if post.data.date %}
+              <div class="post-date">
+                {{ post.data.date.toUTCString().substring(0, 16) }}
+              </div>
+              {% endif %}
             </div>
           </li>
-          {%- endfor %}
+          {% endfor %}
         </ul>
       </article>
     </main>
