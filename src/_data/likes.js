@@ -1,7 +1,7 @@
 var pg = require("pg");
+require("dotenv").config();
 
-const connectionString =
-  "postgres://postgres:pittcscblogsrock@db.httmchjxjclwidvyocby.supabase.co:6543/postgres";
+const connectionString = process.env.SUPABASE_CONNECTION;
 
 const getLikes = async () => {
   var pgClient = new pg.Client(connectionString);
