@@ -29,6 +29,8 @@ async function registerLike(title) {
 }
 
 const likeButton = document.querySelector("#likeButton");
+const shareButton = document.querySelector("#shareButton");
+const shareButtonPopup = document.querySelector("#postSharePopup");
 
 const l = JSON.parse(localStorage.getItem("likes"));
 
@@ -36,7 +38,7 @@ const isPresent = (element) =>
   element === likeButton.getAttribute("data-title");
 
 if (l != null || l != undefined) {
-  if (!l.some(isPresent)) {
+  if (l.some(isPresent)) {
     likeButton.classList.add("filled-heart");
   }
 }
@@ -44,4 +46,26 @@ if (l != null || l != undefined) {
 likeButton.addEventListener("click", async () => {
   registerLike(likeButton.getAttribute("data-title"));
   likeButton.classList.toggle("filled-heart");
+});
+
+shareButton.addEventListener("click", () => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: document.title,
+        url: window.location.href,
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  } else {
+    if (shareButtonPopup.classList.contains("popup-appear")) {
+      shareButtonPopup.classList.remove("popup-appear");
+    }
+    const cb = navigator.clipboard;
+    cb.writeText(window.location.href).then(() => {
+      shareButtonPopup.classList.toggle("popup-appear");
+    });
+  }
 });
