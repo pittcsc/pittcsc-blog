@@ -1,9 +1,4 @@
-import supabase from "./supabase.js";
-
 async function registerLike(title) {
-  const { data, error } = await supabase.from("posts").select();
-  console.log(data, error);
-
   const l = JSON.parse(localStorage.getItem("likes"));
 
   const isPresent = (element) => element === title;
