@@ -213,11 +213,10 @@
     .post-footer .footer-metadata .author {
       font-weight: bold; }
     .post-footer .footer-metadata .post-footer-btns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem; }
+      display: flex; }
       .post-footer .footer-metadata .post-footer-btns .post-share-container {
-        position: relative; }
+        position: relative;
+        margin-right: 0.5rem; }
         .post-footer .footer-metadata .post-footer-btns .post-share-container .post-share-popup {
           transition: opacity, transform 0.3s ease;
           opacity: 0;
@@ -244,9 +243,8 @@
           color: #222;
           font-size: 2.5rem;
           line-height: normal;
-          width: 48px;
-          height: 48px;
-          border-radius: 100%;
+          min-width: 48px;
+          min-height: 48px;
           border: 2px solid gainsboro;
           cursor: pointer;
           transition: 0.3s ease;
@@ -262,11 +260,10 @@
         margin: 0;
         text-decoration: none;
         color: #222;
-        font-size: 2.5rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
         line-height: normal;
-        width: 48px;
-        height: 48px;
-        border-radius: 100%;
         border: 2px solid gainsboro;
         cursor: pointer;
         transition: 0.3s ease;
@@ -275,7 +272,8 @@
           transform: translateY(-4px); }
         .post-footer .footer-metadata .post-footer-btns .post-like svg {
           fill: transparent;
-          stroke: #ff2581; }
+          stroke: #ff2581;
+          margin-right: 0.5rem; }
   .post-footer .other-posts {
     margin-top: 4rem; }
     .post-footer .other-posts .other-posts-title {
