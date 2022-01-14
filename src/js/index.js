@@ -1,27 +1,43 @@
-var pg = require("pg");
-
 async function registerLike(title) {
-  const connectionString =
-    "postgres://postgres:pittcscblogsrock@db.httmchjxjclwidvyocby.supabase.co:6543/postgres";
-
   const l = JSON.parse(localStorage.getItem("likes"));
 
   const isPresent = (element) => element === title;
 
-  if (l != null || l != undefined) {
+  if (l != null && l != undefined) {
     if (!l.some(isPresent)) {
       localStorage.setItem("likes", JSON.stringify([...l, title]));
-      var pgClient = new pg.Client(connectionString);
-      pgClient.connect();
-      pgClient.query(
-        "UPDATE posts SET likes = likes + 1 WHERE title = " + title
-      );
+      const like = "increment";
+
+      const res = await fetch("/api/post", {
+        method: "POST",
+        body: JSON.stringify({
+          title,
+          like,
+        }),
+      });
+      const body = await res.json();
+
+      // Uncomment this to show supabase response
+      // console.log(body);
     } else {
       const filteredArray = l.filter((el) => {
         return el !== title;
       });
-
       localStorage.setItem("likes", JSON.stringify(filteredArray));
+
+      const like = "decrement";
+
+      const res = await fetch("/api/post", {
+        method: "POST",
+        body: JSON.stringify({
+          title,
+          like,
+        }),
+      });
+      const body = await res.json();
+
+      // Uncomment this to show supabase response
+      // console.log(body);
     }
   } else {
     localStorage.setItem("likes", JSON.stringify([title]));
