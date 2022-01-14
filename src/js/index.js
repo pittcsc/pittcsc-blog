@@ -1,4 +1,9 @@
+var pg = require("pg");
+
 async function registerLike(title) {
+  const connectionString =
+    "postgres://postgres:pittcscblogsrock@db.httmchjxjclwidvyocby.supabase.co:6543/postgres";
+
   const l = JSON.parse(localStorage.getItem("likes"));
 
   const isPresent = (element) => element === title;
@@ -6,6 +11,11 @@ async function registerLike(title) {
   if (l != null || l != undefined) {
     if (!l.some(isPresent)) {
       localStorage.setItem("likes", JSON.stringify([...l, title]));
+      var pgClient = new pg.Client(connectionString);
+      pgClient.connect();
+      pgClient.query(
+        "UPDATE posts SET likes = likes + 1 WHERE title = " + title
+      );
     } else {
       const filteredArray = l.filter((el) => {
         return el !== title;
