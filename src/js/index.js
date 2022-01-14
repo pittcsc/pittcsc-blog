@@ -57,19 +57,35 @@ async function registerLike(title) {
   }
 }
 
-const l = JSON.parse(localStorage.getItem("likes"));
+async function getInitialLikeCount(title) {
+  const res = await fetch("/api/post");
+  const body = await res.json();
+  console.log(body);
 
-const isPresent = (element) =>
-  element === likeButton.getAttribute("data-title");
+  const filteredArray = body.rows.filter((el) => {
+    return el.title === title;
+  });
 
-if (l != null || l != undefined) {
-  if (l.some(isPresent)) {
-    likeButton.classList.add("filled-heart");
-    let likeCount = parseInt(postLikeCount.textContent);
-    likeCount++;
-    postLikeCount.textContent = likeCount.toString();
+  console.log(filteredArray);
+
+  postLikeCount.textContent = filteredArray[0].likes.toString();
+
+  const l = JSON.parse(localStorage.getItem("likes"));
+
+  const isPresent = (element) =>
+    element === likeButton.getAttribute("data-title");
+
+  if (l != null || l != undefined) {
+    if (l.some(isPresent)) {
+      likeButton.classList.add("filled-heart");
+      let likeCount = parseInt(postLikeCount.textContent);
+      likeCount++;
+      postLikeCount.textContent = likeCount.toString();
+    }
   }
 }
+
+getInitialLikeCount(likeButton.getAttribute("data-title"));
 
 likeButton.addEventListener("click", async () => {
   registerLike(likeButton.getAttribute("data-title"));
