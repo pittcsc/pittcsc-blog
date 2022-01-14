@@ -97,3 +97,25 @@ shareButton.addEventListener("click", () => {
     });
   }
 });
+
+shareButton.addEventListener("click", () => {
+  if (navigator.share) {
+    navigator
+      .share({
+        title: document.title,
+        url: window.location.href,
+      })
+      .then(() => {
+        console.log("Thanks for sharing!");
+      })
+      .catch(console.error);
+  } else {
+    if (shareButtonPopup.classList.contains("popup-appear")) {
+      shareButtonPopup.classList.remove("popup-appear");
+    }
+    const cb = navigator.clipboard;
+    cb.writeText(window.location.href).then(() => {
+      shareButtonPopup.classList.toggle("popup-appear");
+    });
+  }
+});
