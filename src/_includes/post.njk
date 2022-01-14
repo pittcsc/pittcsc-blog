@@ -67,7 +67,7 @@
           <div class="post-footer-btns">
             {% for like in likes.rows %}
             {% if like.title == title %}
-              <p>{{like.likes}}</p>
+              <p id="postLikeCount" class="post-like-count">{{like.likes}}</p>
             {% endif %}
             {% endfor %}
           <div class="post-share-container">

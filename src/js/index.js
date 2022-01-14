@@ -1,3 +1,8 @@
+const likeButton = document.querySelector("#likeButton");
+const postLikeCount = document.querySelector("#postLikeCount");
+const shareButton = document.querySelector("#shareButton");
+const shareButtonPopup = document.querySelector("#postSharePopup");
+
 async function registerLike(title) {
   const l = JSON.parse(localStorage.getItem("likes"));
 
@@ -19,6 +24,10 @@ async function registerLike(title) {
 
       // Uncomment this to show supabase response
       // console.log(body);
+
+      let likeCount = parseInt(postLikeCount.textContent);
+      likeCount++;
+      postLikeCount.textContent = likeCount.toString();
     } else {
       const filteredArray = l.filter((el) => {
         return el !== title;
@@ -38,15 +47,15 @@ async function registerLike(title) {
 
       // Uncomment this to show supabase response
       // console.log(body);
+
+      let likeCount = parseInt(postLikeCount.textContent);
+      likeCount--;
+      postLikeCount.textContent = likeCount.toString();
     }
   } else {
     localStorage.setItem("likes", JSON.stringify([title]));
   }
 }
-
-const likeButton = document.querySelector("#likeButton");
-const shareButton = document.querySelector("#shareButton");
-const shareButtonPopup = document.querySelector("#postSharePopup");
 
 const l = JSON.parse(localStorage.getItem("likes"));
 
@@ -56,6 +65,9 @@ const isPresent = (element) =>
 if (l != null || l != undefined) {
   if (l.some(isPresent)) {
     likeButton.classList.add("filled-heart");
+    let likeCount = parseInt(postLikeCount.textContent);
+    likeCount++;
+    postLikeCount.textContent = likeCount.toString();
   }
 }
 
