@@ -54,6 +54,23 @@ async function registerLike(title) {
     }
   } else {
     localStorage.setItem("likes", JSON.stringify([title]));
+    const like = "increment";
+
+    const res = await fetch("/api/post", {
+      method: "POST",
+      body: JSON.stringify({
+        title,
+        like,
+      }),
+    });
+    const body = await res.json();
+
+    // Uncomment this to show supabase response
+    // console.log(body);
+
+    let likeCount = parseInt(postLikeCount.textContent);
+    likeCount++;
+    postLikeCount.textContent = likeCount.toString();
   }
 }
 
