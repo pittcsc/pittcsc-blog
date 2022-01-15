@@ -4,8 +4,6 @@ const formattedReturn = require("./formattedReturn");
 module.exports = async (event) => {
   const body = JSON.parse(event.body);
 
-  console.log(body);
-  // console.log("Fields", fields);
   const pgQuery = "INSERT INTO posts(likes, title, author) VALUES($1, $2, $3)";
   const values = [0, body.title, body.author];
   try {
