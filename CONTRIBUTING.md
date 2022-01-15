@@ -34,6 +34,8 @@ The markdown file you submit has to follow a certain format, nothing too weird o
 ---
 title: How to Animate with CSS
 author: Alexander Grattan
+tags: ["web dev"]
+date: 2021-12-20
 ---
 
 Paragraphs are separated by a blank line.
