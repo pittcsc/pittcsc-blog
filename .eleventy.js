@@ -1,4 +1,7 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addWatchTarget("./src/sass/");
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("./src/js");
@@ -16,11 +19,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addNunjucksFilter("filterTagList", filterTagList);
 
-  eleventyConfig.addCollection("tagList", function(collection) {
+  eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
-    collection.getAll().forEach(item => {
+    collection.getAll().forEach((item) => {
       if (item.data.tags != undefined) {
-        (item.data.tags || []).forEach(tag => tagSet.add(tag));
+        (item.data.tags || []).forEach((tag) => tagSet.add(tag));
       }
     });
     tagSet.delete("posts");
