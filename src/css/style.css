@@ -59,7 +59,7 @@
   .tag-list .html {
     background-color: #ede9fe; }
   .tag-list .interview {
-    background-color: #e4b9b0; }
+    background-color: #ffe4e6; }
 
 .home-pagination {
   position: relative; }
@@ -138,7 +138,7 @@
       .post-list li .post-block .post-tag .html {
         background-color: #ede9fe; }
       .post-list li .post-block .post-tag .interview {
-        background-color: #e4b9b0; }
+        background-color: #ffe4e6; }
     .post-list li .post-block .post-author {
       font-weight: bold; }
     .post-list li .post-block .post-date {
@@ -168,7 +168,7 @@
   .post-title-tag .html {
     background-color: #ede9fe; }
   .post-title-tag .interview {
-    background-color: #e4b9b0; }
+    background-color: #ffe4e6; }
 
 .filled-heart svg {
   animation: fill-animation 300ms ease forwards; }
