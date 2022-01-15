@@ -2,6 +2,7 @@ const likeButton = document.querySelector("#likeButton");
 const postLikeCount = document.querySelector("#postLikeCount");
 const shareButton = document.querySelector("#shareButton");
 const shareButtonPopup = document.querySelector("#postSharePopup");
+const postAuthor = document.querySelector("#postAuthor");
 
 async function registerLike(title) {
   const l = JSON.parse(localStorage.getItem("likes"));
@@ -14,7 +15,7 @@ async function registerLike(title) {
       const like = "increment";
 
       const res = await fetch("/api/post", {
-        method: "POST",
+        method: "PUT",
         body: JSON.stringify({
           title,
           like,
@@ -37,7 +38,7 @@ async function registerLike(title) {
       const like = "decrement";
 
       const res = await fetch("/api/post", {
-        method: "POST",
+        method: "PUT",
         body: JSON.stringify({
           title,
           like,
@@ -57,7 +58,7 @@ async function registerLike(title) {
     const like = "increment";
 
     const res = await fetch("/api/post", {
-      method: "POST",
+      method: "PUT",
       body: JSON.stringify({
         title,
         like,
@@ -86,7 +87,18 @@ async function getInitialLikeCount(title) {
   if (filteredArray.length > 0) {
     postLikeCount.textContent = filteredArray[0].likes.toString();
   } else {
+    const author = postAuthor.textContent;
+
     postLikeCount.textContent = "0";
+    const res = await fetch("/api/post", {
+      method: "POST",
+      body: JSON.stringify({
+        title,
+        author,
+      }),
+    });
+    const body = await res.json();
+    console.log(body);
   }
 
   const l = JSON.parse(localStorage.getItem("likes"));
