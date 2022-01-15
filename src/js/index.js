@@ -78,9 +78,6 @@ async function getInitialLikeCount(title) {
   if (l != null || l != undefined) {
     if (l.some(isPresent)) {
       likeButton.classList.add("filled-heart");
-      let likeCount = parseInt(postLikeCount.textContent);
-      likeCount++;
-      postLikeCount.textContent = likeCount.toString();
     }
   }
 }
