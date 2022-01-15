@@ -118,12 +118,12 @@
       font-weight: bold;
     }
     .post-footer-btns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.5rem;
+      display: flex;
+      // grid-template-columns: 1fr 1fr;
 
       .post-share-container {
         position: relative;
+        margin-right: 0.5rem;
         .post-share-popup {
           transition: opacity, transform 0.3s ease;
           opacity: 0;
@@ -151,9 +151,9 @@
           color: #222;
           font-size: 2.5rem;
           line-height: normal;
-          width: 48px;
-          height: 48px;
-          border-radius: 100%;
+          min-width: 48px;
+          min-height: 48px;
+          // border-radius: 100%;
           border: 2px solid gainsboro;
           cursor: pointer;
           transition: 0.3s ease;
@@ -176,11 +176,13 @@
         margin: 0;
         text-decoration: none;
         color: #222;
-        font-size: 2.5rem;
+        font-size: 1.25rem;
+        font-weight: bold;
+        font-family: "Poppins", sans-serif;
         line-height: normal;
-        width: 48px;
-        height: 48px;
-        border-radius: 100%;
+        // width: 48px;
+        // height: 48px;
+        // border-radius: 100%;
         border: 2px solid gainsboro;
         cursor: pointer;
         transition: 0.3s ease;
@@ -193,6 +195,7 @@
         svg {
           fill: transparent;
           stroke: #ff2581;
+          margin-right: 0.5rem;
         }
       }
     }

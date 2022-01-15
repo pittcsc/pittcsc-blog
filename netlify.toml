@@ -1,3 +1,20 @@
 [build]
   publish = "public/"
   command = "npm run build"
+
+[functions]
+  # Directory with serverless functions, including background functions,
+  # to deploy. This is relative to the base directory if one has been set, 
+  # or the root directory if a base hasn’t been set.
+  directory = "functions/"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# note: each of these fields are OPTIONAL
+[dev]
+  command = "npm start" # Command to start your dev server
+  port = 8888 # The port that the netlify dev will be accessible on
+  autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser
