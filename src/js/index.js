@@ -66,9 +66,11 @@ async function getInitialLikeCount(title) {
     return el.title === title;
   });
 
-  console.log(filteredArray);
-
-  postLikeCount.textContent = filteredArray[0].likes.toString();
+  if (filteredArray.length > 0) {
+    postLikeCount.textContent = filteredArray[0].likes.toString();
+  } else {
+    postLikeCount.textContent = "0";
+  }
 
   const l = JSON.parse(localStorage.getItem("likes"));
 
