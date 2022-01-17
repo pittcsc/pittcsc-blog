@@ -5,14 +5,6 @@ tags: ["web dev"]
 date: 2021-12-19
 ---
 
-## What the Hell is CSS?
-
-Before you learn how to animate your website, you gotta know CSS first. Take a look at these awesome tutorials to get yourself caught up.
-
-- Mozilla Tutorial <https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps>
-- CSS Pro Tips <https://www.youtube.com/watch?v=Qhaz36TZG5Ys>
-- HTML + CSS Crash Course <https://www.youtube.com/watch?v=D-h8L5hgW-w>
-
 ## What the Hell is GSAP?
 
 GSAP (GreenSock Animation Platform) is the hallmark JavaScript animation library used on many of the most beatifully animated, award-winning websites. Made by [GreenSock](https://greensock.com/), GSAP has an incredibly supportive community as well as a responsive dev team that regularly responds to posts on their [forum](https://greensock.com/forums/forum/11-gsap/) (it has over 100k posts!).
