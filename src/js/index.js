@@ -4,6 +4,16 @@ const shareButton = document.querySelector("#shareButton");
 const shareButtonPopup = document.querySelector("#postSharePopup");
 const postAuthor = document.querySelector("#postAuthor");
 
+// let myrng = new Math.seedrandom("hello.");
+// console.log(myrng()); // Always 0.9282578795792454
+// console.log(myrng());
+
+// function getRandomInt(max) {
+//   return Math.floor(myrng() * max);
+// }
+
+// const tagColors = ["#fef3c7", "#cffafe", "#ecfccb", "#ede9fe"];
+
 async function registerLike(title) {
   const l = JSON.parse(localStorage.getItem("likes"));
 
@@ -118,28 +128,6 @@ getInitialLikeCount(likeButton.getAttribute("data-title"));
 likeButton.addEventListener("click", async () => {
   registerLike(likeButton.getAttribute("data-title"));
   likeButton.classList.toggle("filled-heart");
-});
-
-shareButton.addEventListener("click", () => {
-  if (navigator.share) {
-    navigator
-      .share({
-        title: document.title,
-        url: window.location.href,
-      })
-      .then(() => {
-        console.log("Thanks for sharing!");
-      })
-      .catch(console.error);
-  } else {
-    if (shareButtonPopup.classList.contains("popup-appear")) {
-      shareButtonPopup.classList.remove("popup-appear");
-    }
-    const cb = navigator.clipboard;
-    cb.writeText(window.location.href).then(() => {
-      shareButtonPopup.classList.toggle("popup-appear");
-    });
-  }
 });
 
 shareButton.addEventListener("click", () => {
