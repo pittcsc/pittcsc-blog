@@ -2,9 +2,9 @@
   <img src="./src/images/Pitt_CSC_Blog_OG_Image.png" />
 </div>
 
-# Welcome to CSC Branches!
+# Welcome to the Pitt CSC Blog!
 
-This README will give you important info on how to add your posts to the CSC branches websites!
+This README will give you important info on how to add your posts to the CSC Blog!
 First off, here are all the branches websites available to you right now! Just click on the one you're interested in and you'll be able to follow along and add your post!
 
 ### Our branches
