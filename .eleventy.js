@@ -1,5 +1,20 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+const Discord = require("discord.js")
+const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] });
+client.login(process.env.BOT_CONNECTION);
+
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`)
+  client.channels.cache.get('933196235559534612').send('The site is starting up...');
+})
+
+client.on("message", msg => {
+  if (msg.content === "!tags") {
+    msg.reply(tagSet);
+  }
+})
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addWatchTarget("./src/sass/");
