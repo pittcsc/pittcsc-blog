@@ -52,7 +52,7 @@ Alright so let's start out with some basic HTML.
 
   </td>
   <td>
-    <img src="https://user-images.githubusercontent.com/51346343/151062508-b320d640-3d83-47e7-a753-6a1bd58af77c.png" />
+![image](https://user-images.githubusercontent.com/51346343/151063612-b03405cd-443f-4727-af82-09e780847cc9.png)
   </td>
 
   </tr>
