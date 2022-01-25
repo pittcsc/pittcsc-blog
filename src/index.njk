@@ -65,7 +65,7 @@ pagination:
     {# START NEW CODE #}
       <article>
         <h2>Navigate</h2>
-        <a href="/search" class="view-all-link">Search Blog</a>
+        {# <a href="/search" class="view-all-link">Search Blog</a> #}
         <div class="tag-list">
                 {% for tag in collections.tagList %} {% set tagUrl
                 %}/tags/{{ tag | slug }}/{% endset %}
