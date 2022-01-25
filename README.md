@@ -7,6 +7,7 @@
 This README will give you important info on how to add your posts to the CSC Blog!
 First off, here are all the branches websites available to you right now! Just click on the one you're interested in and you'll be able to follow along and add your post!
 
+
 # Table of contents
 
 - [Table of contents](#table-of-contents)
@@ -22,6 +23,7 @@ First off, here are all the branches websites available to you right now! Just c
     - [1. Opening pull request](#1-opening-pull-request)
     - [2. Reviewing the post](#2-reviewing-the-post)
     - [3. Merging](#3-merging)
+
 
 # Contributing
 
