@@ -20,7 +20,7 @@
 
 # Contributing
 
-Contributing to CSC Branches is very simple. All you have to do is create a markdown file (more on this later) and submit a pull requst, basically asking for it to be added to the website.
+Contributing to The Pitt CSC Blog is very simple. All you have to do is create a markdown file (more on this later) and submit a pull requst, basically asking for it to be added to the website.
 
 # The markdown file
 
