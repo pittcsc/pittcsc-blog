@@ -53,7 +53,7 @@ content starts at 4-columns in.
 
   </td>
   <td>
-    <img src="https://user-images.githubusercontent.com/51346343/151062053-be5c8a21-52eb-4e3c-b3d3-b9d4fcc857cb.png" />
+    <img src="https://user-images.githubusercontent.com/51346343/151062508-b320d640-3d83-47e7-a753-6a1bd58af77c.png" />
   </td>
 
   </tr>
