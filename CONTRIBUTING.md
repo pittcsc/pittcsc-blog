@@ -48,18 +48,6 @@ Needless to say, it's a popular library and a great tool to know and have at you
       
 Alright so let's start out with some basic HTML.
 
-\```html
-<body>
-  <h1>Hello there, I'm <span id="name">Alexander Grattan</span></h1>
-  <img
-    id="image1"
-    src="./Guy_Fieri.jpg"
-    alt="Alexander Grattan standing in front of a restaurant"
-  />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="script.js"></script>
-</body>
-\```
 ```
 
   </td>
