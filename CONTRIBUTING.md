@@ -1,5 +1,5 @@
-<div style="background-color: white; height: 200px; width: 50%; margin: auto;">
-  <img src="./branches-logo.svg" />
+<div style="width: 50%; margin: auto;">
+  <img src="./src/images/Pitt_CSC_Blog_OG_Image.png" />
 </div>
 
 # Table of contents
