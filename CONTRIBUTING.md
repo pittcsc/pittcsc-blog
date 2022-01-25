@@ -40,14 +40,14 @@ date: 2021-12-19
 
 ## What the Hell is GSAP?
 
-GSAP (GreenSock Animation Platform) is the hallmark JavaScript animation library used on many of the most beatifully animated, award-winning websites. Made by [GreenSock](https://greensock.com/), GSAP has an incredibly supportive community as well as a responsive dev team that regularly responds to posts on their [forum](https://greensock.com/forums/forum/11-gsap/) (it has over 100k posts!).
+GSAP (GreenSock Animation Platform) is the hallmark JavaScript animation library used on many of the most beatifully animated, award-winning websites. 
+Made by [GreenSock](https://greensock.com/), GSAP has an incredibly supportive community as well as a responsive dev team that regularly responds to posts on their [forum](https://greensock.com/forums/forum/11-gsap/) (it has over 100k posts!).
 
 Needless to say, it's a popular library and a great tool to know and have at your disposal.
 
 ## Let's Build Something
       
 Alright so let's start out with some basic HTML.
-
 ```
 
   </td>
