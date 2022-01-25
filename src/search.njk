@@ -1,10 +1,6 @@
 ---
-title: The Pitt CSC Blog
-pagination:
-  data: collections.posts
-  size: 3
-  alias: posts
-  reverse: true
+title: Search Results
+permalink: /search/
 ---
 
 <!DOCTYPE html>
@@ -64,49 +60,30 @@ pagination:
     <main>
     {# START NEW CODE #}
       <article>
-        <h2>Navigate</h2>
-        {# <a href="/search" class="view-all-link">Search Blog</a> #}
+        <h2 class="subheading">Tags</h2>
         <div class="tag-list">
                 {% for tag in collections.tagList %} {% set tagUrl
                 %}/tags/{{ tag | slug }}/{% endset %}
                 <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
                   tag
                 }}</a>
-                  {% if loop.index % 6 == 0 %}
-                    </div><div class="line-break"><br /></div><div class="tag-list">
-                  {% endif %}
                 {% endfor %}
               </div>
       </article>
     {# END NEW CODE #}
       <article>
-        <h2 class="subheading">Featured Posts</h2>
-        <ul class="post-list">
-          {% for post in posts %}
-          <li>
-            <div class="post-block">
-              <a href="{{ post.url }}" class="post-title">{{
-                post.data.title
-              }}</a>
-              <div class="post-tag">
-                {% for tag in post.data.tags | filterTagList %} {% set tagUrl
-                %}/tags/{{ tag | slug }}/{% endset %}
-                <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
-                  tag
-                }}</a>
-                {% endfor %}
-              </div>
-              <div class="post-author">By {{ post.data.author }}</div>
-              <div class="post-date">
-                {{ post.date.toUTCString().substring(0, 16) }}
-              </div>
+        <h2 class="subheading">Search Results</h2>
+        <section class="[ post__body ] [ pad-top-700 gap-bottom-900 ]">
+            <div class="[ inner-wrapper ] [ sf-flow ]">
+            <input autocomplete="off" type="search" id="search" placeholder="search term" />
+            <ul id="results"></ul>
             </div>
-          </li>
-          {%- endfor %}
-        </ul>
+        </section>
+        <script defer type="text/javascript" src="/js/search.js"></script>
         <a href="/post-list" class="view-all-link">View All Posts</a>
       </article>
     </main>
+    
     <footer class="page-footer">
       <a
         href="https://pittcsc.org/"

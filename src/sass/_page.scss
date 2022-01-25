@@ -62,3 +62,7 @@
 .tag-list {
   @include tag-list;
 }
+
+.line-break {
+  line-height: 0px;
+}
