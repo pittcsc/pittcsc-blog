@@ -32,23 +32,34 @@ The markdown file you submit has to follow a certain format, nothing too weird o
 
 ```Markdown
 ---
-title: How to Animate with CSS
+title: How to Animate Your Website With GSAP
 author: Alexander Grattan
 tags: ["web dev"]
-date: 2021-12-20
+date: 2021-12-19
 ---
 
-Paragraphs are separated by a blank line.
+## What the Hell is GSAP?
 
-2nd paragraph. _Italic_, **bold**, and `monospace`. Itemized lists
-look like:
+GSAP (GreenSock Animation Platform) is the hallmark JavaScript animation library used on many of the most beatifully animated, award-winning websites. Made by [GreenSock](https://greensock.com/), GSAP has an incredibly supportive community as well as a responsive dev team that regularly responds to posts on their [forum](https://greensock.com/forums/forum/11-gsap/) (it has over 100k posts!).
 
-- this one
-- that one
-- the other one
+Needless to say, it's a popular library and a great tool to know and have at your disposal.
 
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
+## Let's Build Something
+      
+Alright so let's start out with some basic HTML.
+
+```html
+<body>
+  <h1>Hello there, I'm <span id="name">Alexander Grattan</span></h1>
+  <img
+    id="image1"
+    src="./Guy_Fieri.jpg"
+    alt="Alexander Grattan standing in front of a restaurant"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+```
 ```
 
   </td>
