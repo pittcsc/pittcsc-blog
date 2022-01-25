@@ -72,6 +72,9 @@ pagination:
                 <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{
                   tag
                 }}</a>
+                  {% if loop.index % 6 == 0 %}
+                    </div><div class="line-break"><br /></div><div class="tag-list">
+                  {% endif %}
                 {% endfor %}
               </div>
       </article>

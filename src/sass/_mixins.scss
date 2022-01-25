@@ -33,6 +33,38 @@
   .interview {
     background-color: $rose;
   }
+
+  .game {
+    background-color: $fuschia;
+  }
+
+  .panther {
+    background-color: $green;
+  }
+
+  .pitt {
+    background-color: $red;
+  }
+
+  .robotics {
+    background-color: $yellow;
+  }
+
+  .algo {
+    background-color: $emerald;
+  }
+
+  .swift {
+    background-color: $orange;
+  }
+
+  .math {
+    background-color: $teal;
+  }
+
+  .rust {
+    background-color: $blue;
+  }
 }
 
 @mixin tag-list {
@@ -70,6 +102,38 @@
 
   .interview {
     background-color: $rose;
+  }
+
+  .game {
+    background-color: $fuschia;
+  }
+
+  .panther {
+    background-color: $green;
+  }
+
+  .pitt {
+    background-color: $red;
+  }
+
+  .robotics {
+    background-color: $yellow;
+  }
+
+  .algo {
+    background-color: $emerald;
+  }
+
+  .swift {
+    background-color: $orange;
+  }
+
+  .math {
+    background-color: $teal;
+  }
+
+  .rust {
+    background-color: $blue;
   }
 }
 

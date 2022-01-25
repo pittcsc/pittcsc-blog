@@ -60,6 +60,25 @@
     background-color: #ede9fe; }
   .tag-list .interview {
     background-color: #ffe4e6; }
+  .tag-list .game {
+    background-color: #fae8ff; }
+  .tag-list .panther {
+    background-color: #dcfce7; }
+  .tag-list .pitt {
+    background-color: #fee2e2; }
+  .tag-list .robotics {
+    background-color: #fef9c3; }
+  .tag-list .algo {
+    background-color: #d1fae5; }
+  .tag-list .swift {
+    background-color: #ffedd5; }
+  .tag-list .math {
+    background-color: #ccfbf1; }
+  .tag-list .rust {
+    background-color: #dbeafe; }
+
+.line-break {
+  line-height: 0px; }
 
 .home-pagination {
   position: relative; }
@@ -139,6 +158,22 @@
         background-color: #ede9fe; }
       .post-list li .post-block .post-tag .interview {
         background-color: #ffe4e6; }
+      .post-list li .post-block .post-tag .game {
+        background-color: #fae8ff; }
+      .post-list li .post-block .post-tag .panther {
+        background-color: #dcfce7; }
+      .post-list li .post-block .post-tag .pitt {
+        background-color: #fee2e2; }
+      .post-list li .post-block .post-tag .robotics {
+        background-color: #fef9c3; }
+      .post-list li .post-block .post-tag .algo {
+        background-color: #d1fae5; }
+      .post-list li .post-block .post-tag .swift {
+        background-color: #ffedd5; }
+      .post-list li .post-block .post-tag .math {
+        background-color: #ccfbf1; }
+      .post-list li .post-block .post-tag .rust {
+        background-color: #dbeafe; }
     .post-list li .post-block .post-author {
       font-weight: bold; }
     .post-list li .post-block .post-date {
@@ -169,6 +204,22 @@
     background-color: #ede9fe; }
   .post-title-tag .interview {
     background-color: #ffe4e6; }
+  .post-title-tag .game {
+    background-color: #fae8ff; }
+  .post-title-tag .panther {
+    background-color: #dcfce7; }
+  .post-title-tag .pitt {
+    background-color: #fee2e2; }
+  .post-title-tag .robotics {
+    background-color: #fef9c3; }
+  .post-title-tag .algo {
+    background-color: #d1fae5; }
+  .post-title-tag .swift {
+    background-color: #ffedd5; }
+  .post-title-tag .math {
+    background-color: #ccfbf1; }
+  .post-title-tag .rust {
+    background-color: #dbeafe; }
 
 .filled-heart svg {
   animation: fill-animation 300ms ease forwards; }

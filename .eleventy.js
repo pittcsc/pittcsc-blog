@@ -1,20 +1,5 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-const Discord = require("discord.js")
-const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES] });
-client.login(process.env.BOT_CONNECTION);
-
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`)
-  client.channels.cache.get('933196235559534612').send('The site is starting up...');
-})
-
-client.on("message", msg => {
-  if (msg.content === "!tags") {
-    msg.reply(tagSet);
-  }
-})
-
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addWatchTarget("./src/sass/");
@@ -36,6 +21,14 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
+    tagSet.add("game dev");
+    tagSet.add("panther ml");
+    tagSet.add("pitt cyber security");
+    tagSet.add("robotics");
+    tagSet.add("algo trading");
+    tagSet.add("swift dev");
+    tagSet.add("math in cs");
+    tagSet.add("rust dev");
     collection.getAll().forEach((item) => {
       if (item.data.tags != undefined) {
         (item.data.tags || []).forEach((tag) => tagSet.add(tag));
