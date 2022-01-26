@@ -49,7 +49,7 @@ module.exports = async (event) => {
     let tags = "";
     for (let i = 0; i < values[3].length; i++) {
       if (values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
-        tags += "<@&" + values[3][i] + "> ";
+        tags += "@" + values[3][i] + " ";
       }
     }
     const discordParams = {
