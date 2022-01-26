@@ -56,8 +56,7 @@ module.exports = async (event) => {
       content: tags + "A new post was made on the blog!",
       allowed_mentions: {
         parse: ["users", "roles"],
-        users: [],
-        roles: ["Swift Dev"]
+        users: []
       },
       embeds: [
         {
