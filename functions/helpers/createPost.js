@@ -56,7 +56,8 @@ module.exports = async (event) => {
       content: tags + "A new post was made on the blog!",
       allowed_mentions: {
         parse: ["users", "roles"],
-        users: []
+        users: [],
+        roles: values[3]
       },
       embeds: [
         {
