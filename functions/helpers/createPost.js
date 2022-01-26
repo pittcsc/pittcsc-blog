@@ -54,6 +54,9 @@ module.exports = async (event) => {
     }
     const discordParams = {
       content: tags + "A new post was made on the blog!",
+      allowed_mentions: {
+        parse: ["Swift Dev"]
+      },
       embeds: [
         {
           title: `${body.title}`,
