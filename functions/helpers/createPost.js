@@ -17,6 +17,8 @@ module.exports = async (event) => {
   const pgQuery =
     "INSERT INTO posts(likes, title, author, tags) VALUES($1, $2, $3, $4)";
   const values = [0, body.title, body.author, body.tags];
+  // console.log(event.headers.referer);
+  console.log(event);
   try {
     pgClient.query(pgQuery, values, (err, res) => {
       if (err) {
@@ -29,13 +31,19 @@ module.exports = async (event) => {
       }
     });
     client.on("ready", () => {
-      let str =
-        "A new post has been made on the blog! The name of the post is " +
+      let str = "";
+      for (let i = 0; i < values[3].length; i++) {
+        if (values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
+          str += "@ " + values[3][i] + " ";
+        }
+      }
+      str += "A new post has been made on the blog! The name of the post is " +
         values[1] +
         " and is written by " +
         values[2] +
         ". Go check it out!!\n";
-      client.channels.cache.get("933196235559534612").send(str);
+        // event.headers.referer;
+      client.channels.cache.get("935758061228945418").send(str);
     });
     return formattedReturn(200, "Successfully Added New Row!");
   } catch (err) {
