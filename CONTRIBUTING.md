@@ -1,5 +1,5 @@
-<div style="background-color: white; height: 200px; width: 50%; margin: auto;">
-  <img src="./branches-logo.svg" />
+<div style="width: 50%; margin: auto;">
+  <img src="./src/images/Pitt_CSC_Blog_OG_Image.png" />
 </div>
 
 # Table of contents
@@ -20,7 +20,7 @@
 
 # Contributing
 
-Contributing to CSC Branches is very simple. All you have to do is create a markdown file (more on this later) and submit a pull requst, basically asking for it to be added to the website.
+Contributing to The Pitt CSC Blog is very simple. All you have to do is create a markdown file (more on this later) and submit a pull requst, basically asking for it to be added to the website.
 
 # The markdown file
 
@@ -32,10 +32,10 @@ The markdown file you submit has to follow a certain format, nothing too weird o
 
 ```Markdown
 ---
-title: How to Animate with CSS
+title: How to Animate Your Website With GSAP
 author: Alexander Grattan
 tags: ["web dev"]
-date: 2021-12-20
+date: 2021-12-19
 ---
 
 Paragraphs are separated by a blank line.
@@ -53,7 +53,7 @@ content starts at 4-columns in.
 
   </td>
   <td>
-    <img src="sample-post.png" />
+    <img src='https://user-images.githubusercontent.com/51346343/151063612-b03405cd-443f-4727-af82-09e780847cc9.png' />
   </td>
 
   </tr>
