@@ -47,6 +47,7 @@ module.exports = async (event) => {
     let tags = "";
     for (let i = 0; i < values[3].length; i++) {
       if (roleIDs[values[3][i]] != undefined && values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
+        console.log(roleIDs[values[3][i]]);
         tags += "<@&" + roleIDs[values[3][i]] + "> ";
       }
     }
