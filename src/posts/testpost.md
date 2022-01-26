@@ -1,7 +1,7 @@
 ---
-title: Test Post 35
+title: Test Post 36
 author: Robbie Fishel
-tags: ["web dev"]
+tags: ["Web Dev"]
 date: 2022-01-25
 ---
 
