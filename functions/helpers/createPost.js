@@ -57,7 +57,7 @@ module.exports = async (event) => {
       allowed_mentions: {
         parse: ["users", "roles"],
         users: [],
-        roles: values[3]
+        roles: ["Swift Dev"]
       },
       embeds: [
         {
