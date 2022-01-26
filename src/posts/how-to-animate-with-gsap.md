@@ -179,6 +179,8 @@ titleName.addEventListener("mouseleave", imageHover);
 
 And we got it! Give yourself a round of applause!
 
+Here's the final code: <https://codesandbox.io/s/starter-gsap-csc-tutorial-finished-y9d8o>
+
 You just created your first animation with GSAP. There is a whole world of cool creations people have made with this library. I suggest taking a look at some of these resources here if you're interested in learning more:
 
 - **GreenSock Learning YouTube Channel** (<https://www.youtube.com/user/GreenSockLearning>)
