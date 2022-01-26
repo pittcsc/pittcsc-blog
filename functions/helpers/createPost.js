@@ -33,7 +33,7 @@ module.exports = async (event) => {
       let str = "";
       for (let i = 0; i < values[3].length; i++) {
         if (values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
-          str += "@" + values[3][i] + " ";
+          str += "@ " + values[3][i] + " ";
         }
       }
       str += "A new post has been made on the blog! The name of the post is " +
@@ -42,7 +42,7 @@ module.exports = async (event) => {
         values[2] +
         ". Go check it out!!\n" +
         event.headers.referer;
-      client.channels.cache.get("933196235559534612").send(str);
+      client.channels.cache.get("935758061228945418").send(str);
     });
     return formattedReturn(200, "Successfully Added New Row!");
   } catch (err) {
