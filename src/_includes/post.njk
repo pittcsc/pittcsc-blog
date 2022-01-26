@@ -53,7 +53,7 @@
         {% for tag in tags | filterTagList %} {% set tagUrl %}/tags/{{
           tag | slug
         }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}">{{ tag }}</a>
+        <a href="{{ tagUrl | url }}" class="tag-text {{ tag }}" data-tag="{{ tag }}">{{ tag }}</a>
         {% endfor %}
       </div>
     </header>

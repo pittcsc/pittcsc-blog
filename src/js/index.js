@@ -3,6 +3,7 @@ const postLikeCount = document.querySelector("#postLikeCount");
 const shareButton = document.querySelector("#shareButton");
 const shareButtonPopup = document.querySelector("#postSharePopup");
 const postAuthor = document.querySelector("#postAuthor");
+const tagElements = document.querySelectorAll(".tag-text");
 
 // let myrng = new Math.seedrandom("hello.");
 // console.log(myrng()); // Always 0.9282578795792454
@@ -98,6 +99,9 @@ async function getInitialLikeCount(title) {
     postLikeCount.textContent = filteredArray[0].likes.toString();
   } else {
     const author = postAuthor.textContent;
+    const tags = Array.from(tagElements).map((tag) => {
+      return tag.getAttribute("data-tag");
+    });
 
     postLikeCount.textContent = "0";
     const res = await fetch("/api/post", {
@@ -105,6 +109,7 @@ async function getInitialLikeCount(title) {
       body: JSON.stringify({
         title,
         author,
+        tags,
       }),
     });
     const body = await res.json();
