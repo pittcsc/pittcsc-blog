@@ -33,21 +33,20 @@ module.exports = async (event) => {
     });
 
     const roleIDs = {
-      "panther ml":824302386637045780,
-      "game dev":784871450087522345,
-      "pitt cyber security":878053832570056725,
-      "robotics":932105908807409664,
-      "algo trading":794416243339034624,
-      "swift dev":799460107200888874,
-      "web dev":803450886663307265,
-      "math in cs":868499498622668810,
-      "rust dev":891706189874876437
+      "panther ml":"824302386637045780",
+      "game dev":"784871450087522345",
+      "pitt cyber security":"878053832570056725",
+      "robotics":"932105908807409664",
+      "algo trading":"794416243339034624",
+      "swift dev":"799460107200888874",
+      "web dev":"803450886663307265",
+      "math in cs":"868499498622668810",
+      "rust dev":"891706189874876437"
     }
 
     let tags = "";
     for (let i = 0; i < values[3].length; i++) {
       if (roleIDs[values[3][i]] != undefined && values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
-        console.log(roleIDs[values[3][i]]);
         tags += "<@&" + roleIDs[values[3][i]] + "> ";
       }
     }
