@@ -13,8 +13,13 @@ const postAuthor = document.querySelector("#postAuthor");
 // }
 
 // const tagColors = ["#fef3c7", "#cffafe", "#ecfccb", "#ede9fe"];
+async function getBot() {
+  const res = await fetch("/api/hello");
+  const body = await res.json();
+  console.log(body);
+}
 
-console.log(process.env.BOT_CONNECTION);
+getBot();
 
 async function registerLike(title) {
   const l = JSON.parse(localStorage.getItem("likes"));
