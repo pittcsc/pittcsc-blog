@@ -14,6 +14,8 @@ const postAuthor = document.querySelector("#postAuthor");
 
 // const tagColors = ["#fef3c7", "#cffafe", "#ecfccb", "#ede9fe"];
 
+console.log(process.env.BOT_CONNECTION);
+
 async function registerLike(title) {
   const l = JSON.parse(localStorage.getItem("likes"));
 
