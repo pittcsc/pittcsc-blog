@@ -2,7 +2,7 @@ const { pgClient } = require("./supabase");
 const formattedReturn = require("./formattedReturn");
 
 const Discord = require("discord.js");
-const getPosts = require("./getPosts");
+
 const client = new Discord.Client({
   intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
 });
