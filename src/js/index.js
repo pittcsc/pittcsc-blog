@@ -15,6 +15,21 @@ const tagElements = document.querySelectorAll(".tag-text");
 
 // const tagColors = ["#fef3c7", "#cffafe", "#ecfccb", "#ede9fe"];
 
+// async function getHello(title) {
+//   const author = postAuthor.textContent;
+//   const res = await fetch("/api/hello", {
+//     method: "POST",
+//     body: JSON.stringify({
+//       title,
+//       author,
+//     }),
+//   });
+//   const body = await res.json();
+//   console.log(body);
+// }
+
+// getHello("New Post Test");
+
 async function registerLike(title) {
   const l = JSON.parse(localStorage.getItem("likes"));
 
@@ -89,7 +104,6 @@ async function registerLike(title) {
 async function getInitialLikeCount(title) {
   const res = await fetch("/api/post");
   const body = await res.json();
-  console.log(body);
 
   const filteredArray = body.rows.filter((el) => {
     return el.title === title;
@@ -113,7 +127,6 @@ async function getInitialLikeCount(title) {
       }),
     });
     const body = await res.json();
-    console.log(body);
   }
 
   const l = JSON.parse(localStorage.getItem("likes"));

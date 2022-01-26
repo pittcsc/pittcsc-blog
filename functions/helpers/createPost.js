@@ -1,16 +1,17 @@
+const axios = require("axios");
 const { pgClient } = require("./supabase");
 const formattedReturn = require("./formattedReturn");
 
-const Discord = require("discord.js");
+// const Discord = require("discord.js");
 
-const client = new Discord.Client({
-  intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
-});
-client.login(process.env.BOT_CONNECTION);
+// const client = new Discord.Client({
+//   intents: [Discord.Intents.FLAGS.GUILDS, Discord.Intents.FLAGS.GUILD_MESSAGES],
+// });
+// client.login(process.env.BOT_CONNECTION);
 
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
+// client.on("ready", () => {
+//   console.log(`Logged in as ${client.user.tag}!`);
+// });
 
 module.exports = async (event) => {
   const body = JSON.parse(event.body);
@@ -30,21 +31,48 @@ module.exports = async (event) => {
         return formattedReturn(200, res);
       }
     });
-    client.on("ready", () => {
-      let str = "";
-      for (let i = 0; i < values[3].length; i++) {
-        if (values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
-          str += "@ " + values[3][i] + " ";
-        }
-      }
-      str += "A new post has been made on the blog! The name of the post is " +
-        values[1] +
-        " and is written by " +
-        values[2] +
-        ". Go check it out!!\n";
-        // event.headers.referer;
-      client.channels.cache.get("935758061228945418").send(str);
-    });
+    // client.on("ready", () => {
+    //   let str = "";
+    //   for (let i = 0; i < values[3].length; i++) {
+    //     if (values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
+    //       str += "@ " + values[3][i] + " ";
+    //     }
+    //   }
+    //   str += "A new post has been made on the blog! The name of the post is " +
+    //     values[1] +
+    //     " and is written by " +
+    //     values[2] +
+    //     ". Go check it out!!\n";
+    //     // event.headers.referer;
+    //   client.channels.cache.get("935758061228945418").send(str);
+    // });
+
+    const discordParams = {
+      content: "A new post was made on the blog!",
+      embeds: [
+        {
+          title: `${body.title}`,
+          description:
+            "Blog posts and articles written by members of the computer science club at the University of Pittsburgh.",
+          url: `${event.headers.referer}`,
+          color: 16758812,
+          author: {
+            name: `${body.author}`,
+          },
+          thumbnail: {
+            url: "https://pittcsc-blog.netlify.app/images/Pitt_CSC_Blog_OG_Image.png",
+          },
+        },
+      ],
+    };
+
+    const response = await axios.post(
+      process.env.DISCORD_WEBHOOK,
+      discordParams
+    );
+
+    console.log(response);
+
     return formattedReturn(200, "Successfully Added New Row!");
   } catch (err) {
     console.error(err);
