@@ -46,9 +46,14 @@ module.exports = async (event) => {
     //     // event.headers.referer;
     //   client.channels.cache.get("935758061228945418").send(str);
     // });
-
+    let tags = "";
+    for (let i = 0; i < values[3].length; i++) {
+      if (values[3][i].toLowerCase() != "here" && values[3][i].toLowerCase() != "everyone") {
+        tags += "@ " + values[3][i] + " ";
+      }
+    }
     const discordParams = {
-      content: "A new post was made on the blog!",
+      content: tags + "A new post was made on the blog!",
       embeds: [
         {
           title: `${body.title}`,
