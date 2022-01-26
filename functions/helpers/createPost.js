@@ -17,7 +17,8 @@ module.exports = async (event) => {
   const pgQuery =
     "INSERT INTO posts(likes, title, author, tags) VALUES($1, $2, $3, $4)";
   const values = [0, body.title, body.author, body.tags];
-  console.log(event.headers.referer);
+  // console.log(event.headers.referer);
+  console.log(event);
   try {
     pgClient.query(pgQuery, values, (err, res) => {
       if (err) {
@@ -40,8 +41,8 @@ module.exports = async (event) => {
         values[1] +
         " and is written by " +
         values[2] +
-        ". Go check it out!!\n" +
-        event.headers.referer;
+        ". Go check it out!!\n";
+        // event.headers.referer;
       client.channels.cache.get("935758061228945418").send(str);
     });
     return formattedReturn(200, "Successfully Added New Row!");
