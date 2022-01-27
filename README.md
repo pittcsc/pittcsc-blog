@@ -59,8 +59,8 @@ content starts at 4-columns in.
 ```
 
   </td>
-  <td style="width: 100%;">
-    <img src='https://user-images.githubusercontent.com/51346343/151063612-b03405cd-443f-4727-af82-09e780847cc9.png' />
+  <td style="height: 100%">
+    <img style="width: 100%; height: 100%; object-fit: cover;" src='https://user-images.githubusercontent.com/51346343/151063612-b03405cd-443f-4727-af82-09e780847cc9.png' />
   </td>
 
   </tr>
