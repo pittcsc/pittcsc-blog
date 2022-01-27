@@ -35,7 +35,7 @@ The markdown file you submit has to follow a certain format, nothing too weird o
 
 <table>
   <tr>
-    <td>
+    <td style="width: 50%;>
 
 ```Markdown
 ---
@@ -59,7 +59,7 @@ content starts at 4-columns in.
 ```
 
   </td>
-  <td>
+  <td style="width: 50%;">
     <img src='https://user-images.githubusercontent.com/51346343/151063612-b03405cd-443f-4727-af82-09e780847cc9.png' />
   </td>
 
