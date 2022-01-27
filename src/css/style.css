@@ -45,6 +45,7 @@
     margin-right: 0.25rem !important;
     padding: 0.25rem 0.5rem;
     color: black;
+    background-color: #dbeafe;
     font-size: 1rem;
     display: block;
     text-decoration: none; }
@@ -141,8 +142,10 @@
       flex-direction: row; }
       .post-list li .post-block .post-tag .tag-text {
         margin-top: 0 !important;
+        margin-right: 0.25rem !important;
         padding: 0.25rem 0.5rem;
         color: black;
+        background-color: #dbeafe;
         font-size: 1rem;
         display: block;
         text-decoration: none; }
@@ -187,8 +190,10 @@
   flex-direction: row; }
   .post-title-tag .tag-text {
     margin-top: 0 !important;
+    margin-right: 0.25rem !important;
     padding: 0.25rem 0.5rem;
     color: black;
+    background-color: #dbeafe;
     font-size: 1rem;
     display: block;
     text-decoration: none; }
