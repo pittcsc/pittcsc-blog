@@ -112,8 +112,14 @@
   margin-top: 4rem;
   .footer-metadata {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    @media screen and (min-width: 768px) {
+      align-items: center;
+      flex-direction: row;
+    }
     .author {
       font-weight: bold;
     }

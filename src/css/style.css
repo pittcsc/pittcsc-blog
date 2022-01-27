@@ -264,8 +264,14 @@
   margin-top: 4rem; }
   .post-footer .footer-metadata {
     display: flex;
-    align-items: center;
-    justify-content: space-between; }
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem; }
+    @media screen and (min-width: 768px) {
+      .post-footer .footer-metadata {
+        align-items: center;
+        flex-direction: row; } }
     .post-footer .footer-metadata .author {
       font-weight: bold; }
     .post-footer .footer-metadata .post-footer-btns {
