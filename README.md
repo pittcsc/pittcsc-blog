@@ -2,7 +2,7 @@
   <img src="./src/images/Pitt_CSC_Blog_OG_Image.png" />
 </div>
 
-# Welcome to the Pitt CSC Blog!
+# Welcome to the CSC Blog!
 
 This README will give you important info on how to add your posts to the CSC Blog!
 First off, here are all the branches websites available to you right now! Just click on the one you're interested in and you'll be able to follow along and add your post!
@@ -10,6 +10,7 @@ First off, here are all the branches websites available to you right now! Just c
 
 # Table of contents
 
+- [Welcome to the CSC Blog!](#welcome-to-the-csc-blog)
 - [Table of contents](#table-of-contents)
 - [Contributing](#contributing)
 - [The markdown file](#the-markdown-file)
@@ -23,11 +24,12 @@ First off, here are all the branches websites available to you right now! Just c
     - [1. Opening pull request](#1-opening-pull-request)
     - [2. Reviewing the post](#2-reviewing-the-post)
     - [3. Merging](#3-merging)
+  - [Contributing](#contributing-1)
 
 
 # Contributing
 
-Contributing to the Pitt CSC Blog is very simple. All you have to do is create a markdown file (more on this later) and submit a pull requst, basically asking for it to be added to the website.
+Contributing to the CSC Blog is very simple. All you have to do is create a markdown file (more on this later) and submit a pull request, basically asking for it to be added to the website.
 
 # The markdown file
 
@@ -140,7 +142,7 @@ You submitted your first post!!!
 
 # Accepting a post
 
-The easiest way to accpet a post is through [GitHub](https://github.com) by heading over to the branch
+The easiest way to accept a post is through [GitHub](https://github.com) by heading over to the branch
 repository and following these steps:
 
 ### 1. Opening pull request
